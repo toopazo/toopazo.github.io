@@ -17,5 +17,5 @@ Esta pagina web esta pensada como plataforma de divulgación de mi trabajo de in
 Actualmente el sitio está en construcción, por lo que el único contenido a ofrecer -por ahora- son estos artículos que he escrito sobre tecnología open-source para Drones y proyecciones del área en Chile. 
 
 
-- [Alternativas Dronecode](http://toopazo.github.io/files/toopazo_alternativasDronecode.pdf)
-- [Opportunities for Chile in the coming UAS autonomy revolution](http://toopazo.github.io/files/toopazo_UAS_opportunities.pdf)
+- [Alternativas Dronecode](http://toopazo.github.io/files/toopazo_alternativasDronecode.html)
+- [Opportunities for Chile in the coming UAS autonomy revolution](http://toopazo.github.io/files/toopazo_UAS_opportunities.html)
