@@ -13,4 +13,4 @@ Esta pagina web esta pensada como plataforma de divulgación de mi trabajo de in
 
 Actualmente el sitio está en construcción, por lo que el único contenido a ofrecer por ahora esta guía acerca de las alternativas open-source para vehículos aéreos autónomos con las que trabajo
 - [Alternativas Dronecode](http://toopazo.github.io/files/toopazo_alternativasDronecode.pdf)
-- [Notas sobre niveles de autonomía](http://toopazo.github.io/files/autonomy_and_controls.md)
+- [Opportunities for Chile in the coming UAS autonomy revolution](http://toopazo.github.io/files/toopazo_UAS_opportunities.pdf)
