@@ -5,6 +5,7 @@ permalink: /publications/
 author_profile: true
 ---
 
+{% include base_path %}
 Ver publicaciones en Google Scholar (link en menu a la izquierda)
 
 <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u>
