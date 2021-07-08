@@ -6,6 +6,7 @@ author_profile: true
 ---
 
 {% include base_path %}
+
 Ver publicaciones en Google Scholar (link en menu a la izquierda)
 
 <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u>
@@ -17,6 +18,6 @@ Ver publicaciones en Google Scholar (link en menu a la izquierda)
 
 <!--{% include base_path %}-->
 
-<!--{% for post in site.publications reversed %}-->
-<!--  {% include archive-single.html %}-->
-<!--{% endfor %}-->
+{% for post in site.publications reversed %}
+  {% include archive-single.html %}
+{% endfor %}
