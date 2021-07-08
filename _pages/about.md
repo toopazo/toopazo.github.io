@@ -14,7 +14,7 @@ Soy Tomas Opazo, Ing. Electrico de la U. de Chile y Dr. (c) en Ing. Aeroespacial
 
 Esta pagina web esta pensada como plataforma de divulgación de mi trabajo de investigación en control y optimización de vehículos autónomos (Drones, UAV, UAS o como prefiera Ud. llamarlos). Por tanto no puedo garantizar que todo lo expuesto sea 100% correcto. Si encuentra algún error por favor háganmelo saber. 
 
-Actualmente el sitio está en construcción, por lo que el único contenido a ofrecer -por ahora- son estos artículos que he escrito relacionados con tecnología open-source para Drones y proyecciones del área en Chile. 
+Actualmente el sitio está en construcción, por lo que el único contenido a ofrecer -por ahora- son estos artículos que he escrito sobre tecnología open-source para Drones y proyecciones del área en Chile. 
 
 
 - [Alternativas Dronecode](http://toopazo.github.io/files/toopazo_alternativasDronecode.pdf)
