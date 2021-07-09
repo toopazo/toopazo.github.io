@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "es-CL" # "en-US"
-title                    : "Tomas I. Opazo / Blog personal"
+title                    : "Tomas I. Opazo"
 title_separator          : "-"
 name                     : &name "Tomas I. Opazo"
 description              : &description "Research Assitante and PhD (c) in Aerospace Eng. at Penn State University"
