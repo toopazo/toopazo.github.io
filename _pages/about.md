@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-¡Ta da! 
+¡Bienvenidos! 
 
 Mi nombre es Tomas Opazo, soy Ing. Electrico de la U. de Chile y Dr. (c) en Ing. Aeroespacial de la U. Estatal de Pensilvania. Trabajo actualmente como Research Assistant en el Laboratorio de inteligencia y autonomía de vehículos aéreos (AVIA en inglés). 
 
