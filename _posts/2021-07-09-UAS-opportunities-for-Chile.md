@@ -1,7 +1,5 @@
 ﻿
-<p style="text-align: right"> 
-Tomas I. Opazo, June 2021</p>
-
+Urban Air Mobility (UAM) and Drone Package Delivery are two well known and powerful visions that are expected to radically change the landscape of aviation in the coming years. What could Chile do to take advantage of this coming revolution? 
 
 
 # Opportunities for Chile in the coming UAS autonomy revolution
@@ -53,5 +51,8 @@ But beside the vehicles themselves there is a mountain of work to incorporate pi
 - As well as similar initiatives like InterUSS [https://interussplatform.org/](https://interussplatform.org/). 
 
 But beyond UTM there will soon be a need to coordinate and foster the broader ecosystem surrounding piloted and autonomous vehicles in the airspace between a few meters and controlled airspace for civil aviation. This intermediate layer is where a lot of businesses are already exploding in Chile: photogrammetry,  infrastructure inspection, security surveillance, photography and filming, etc. This might become analogous to the dawn of e-comerce in the late 1990s. It is thus worth remembering the case of Amazon and MercadoLibre: they were both founded at about the same time (circa 1998), and they have both seen tremendous growth over the last decade. But even though Amazon has become a giant on a global scale MercadoLibre still fights head to head in the LatinAmerican market ([mercadolibre-vs-amazon](https://www.fool.com/investing/2020/09/26/better-buy-mercadolibre-vs-amazon/)). 
+
+<p style="text-align: right"> 
+Tomas I. Opazo, June 2021</p>
 
 > Written with [StackEdit](https://stackedit.io/).
