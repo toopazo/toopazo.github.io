@@ -10,7 +10,7 @@ Historial de actualizaciones
 - 06-07-2021
 - 07-07-2021 
 
-# Alternativas Dronecode 
+## Alternativas Dronecode 
 
 Las compañías de Drones dominantes como DJI, Parrot, SenseFly, Freefly, etc, ofrecen al mercado soluciones cerradas de hardware y software. Sus vehículos son de muy buena calidad y su fama es merecida. 
 
@@ -148,14 +148,14 @@ Evidentemente un vehículo aéreo que no pueda transportar cámaras, sensores y 
 ADS-B (i.e [Automatic Dependent Surveillance-Broadcast](https://en.wikipedia.org/wiki/Automatic_Dependent_Surveillance%E2%80%93Broadcast#Relationship_to_ADS-A/ADS-C)) es un protocolo de comunicación usado para alertar a los receptores circundantes acerca de la posición de un vehículo aéreo. Es un sistema frecuentemente usado en aviación comercial y que ha sido propuesto como identificación electrónica para vehículos aéreos no tripulados. A pesar de que varios fabricantes ya lo incorporan en sus productos para drones, no está contemplado como parte de la reciente actualización del Part 107 (equivalente a la DAN 151 para Chile) que será obligatorio en EEUU a partir del 2024 ([https://www.faa.gov/uas/commercial_operators/](https://www.faa.gov/uas/commercial_operators/)).
 
 
-# Referencias 
+## Referencias 
 
 
 1. Estimación usada en el PX4 [https://docs.px4.io/master/en/advanced_config/tuning_the_ecl_ekf.html](https://docs.px4.io/master/en/advanced_config/tuning_the_ecl_ekf.html)
 2. Bucles de control en el PX4 [https://docs.px4.io/master/en/flight_stack/controller_diagrams.html#multicopter-control-architecture](https://docs.px4.io/master/en/flight_stack/controller_diagrams.html#multicopter-control-architecture)
 
 
-# Contacto
+## Contacto
 
 Tomas I. Opazo
 toopazo (at / arroba / @) protonmail.com
