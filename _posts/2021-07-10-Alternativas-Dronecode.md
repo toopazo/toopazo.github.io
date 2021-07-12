@@ -110,7 +110,7 @@ En cualquier caso, el sistema dinámico del vehículo es expresado como
 
 $$\boldsymbol{\dot{x}} = \boldsymbol{f}(\boldsymbol{x}, \boldsymbol{u})$$
 
-donde $$\boldsymbol{u}$$ es el vector de variables de control (e.g. velocidad del motor, ángulo de deflexión del alerón). 
+donde $\boldsymbol{u}$ es el vector de variables de control (e.g. velocidad del motor, ángulo de deflexión del alerón). 
 
 Tanto Px4 como la mayoría de los software populares, utilizan las herramientas clásicas de control lineal y bucles PID para resolver el problema de seguimiento. En este caso se linealiza la dinámica del vehículo en torno a vuelo en estático para el caso de un multirrotores, y vuelo a velocidad constante para un avión. Así se obtiene un sistema 
 
