@@ -96,10 +96,10 @@ Es frecuentemente usado para volar tanto multirrotores, aviones y diseños exper
 
 La primera parte de su utilidad está basada en el procesamiento de sensores inerciales (acelerómetros, giroscopios, magnetómetro y barómetro) más sensores de posición y velocidad como los GNSS (e.g. GPS, GLONASS, BDS y Galileo). Estos sensores son combinados junto a un modelo dinámico del vehículo para obtener una estimación de las variables
 
-$\boldsymbol{\dot{x}} = [x,y,z,u,v,w,\theta,\phi,\psi,P,Q,R]^T$
+$$\boldsymbol{\dot{x}} = [x,y,z,u,v,w,\theta,\phi,\psi,P,Q,R]^T$$
 
-donde $\boldsymbol{x}$ es el vector de estado,  $[x,y,z]$ la posición, $[u,v,w]$ la velocidad, $[\theta,\phi,\psi]$ la  posición angular (i.e. [ángulos de Euler](https://es.wikipedia.org/wiki/%C3%81ngulos_de_Euler)) y finalmente 
-$[P,Q,R]$ la velocidad angular. 
+donde $\boldsymbol{x}$ es el vector de estado,  $$[x,y,z]$$ la posición, $$[u,v,w]$$ la velocidad, $$[\theta,\phi,\psi]$$ la  posición angular (i.e. [ángulos de Euler](https://es.wikipedia.org/wiki/%C3%81ngulos_de_Euler)) y finalmente 
+$$[P,Q,R]$$ la velocidad angular. 
 
 
 ### Control
@@ -109,11 +109,11 @@ Luego de la estimación de las variables de estado del vehículo, se hace necesa
 Existen generalmente dos problemas típicos en la teoría de control. El primero es el problema de regulación, dónde queremos mantener al vehículo en un estado (e.g. vuelo estático a 5 m sobre el suelo, o vuelo a 5 m/s en dirección norte) determinado a pesar de las perturbaciones (e.g. viento, inestabilidades del motor, ruido en los sensores). El segundo es el problema de seguimiento, en donde queremos mantener el estado del vehículo (e.g. posición y/o velocidad) lo más cercano posible a una señal de referencia (e.g. comandos del piloto, ruta predefinida). 
 
 En cualquier caso, el sistema dinámico del vehículo es expresado como
-$\boldsymbol{\dot{x}} = \boldsymbol{f}(\boldsymbol{x}, \boldsymbol{u})$
-donde $\boldsymbol{u}$ es el vector de variables de control (e.g. velocidad del motor, ángulo de deflexión del alerón). 
+$$\boldsymbol{\dot{x}} = \boldsymbol{f}(\boldsymbol{x}, \boldsymbol{u})$$
+donde $$\boldsymbol{u}$$ es el vector de variables de control (e.g. velocidad del motor, ángulo de deflexión del alerón). 
 
 Tanto Px4 como la mayoría de los software populares, utilizan las herramientas clásicas de control lineal y bucles PID para resolver el problema de seguimiento. En este caso se linealiza la dinámica del vehículo en torno a vuelo en estático para el caso de un multirrotores, y vuelo a velocidad constante para un avión. Así se obtiene un sistema 
-$\boldsymbol{\dot{x}} = \boldsymbol{A} \boldsymbol{x} + \boldsymbol{B} \boldsymbol{u}$
+$$\boldsymbol{\dot{x}} = \boldsymbol{A} \boldsymbol{x} + \boldsymbol{B} \boldsymbol{u}$$
 
 donde tanto A como B son matrices con coeficientes constantes, pero dependientes del punto de linealización. La derivación matemática queda para otro ocasión, pero para el caso específico de un multirrotores, el diseño es
 
