@@ -22,7 +22,6 @@ Pero si nuestra intención es aprender, experimentar, modificar o innovar con es
 
 Existe un conjunto de proyectos open-source tanto de hardware como de software apoyados oficialmente por la fundación Dronecode ([https://www.dronecode.org/projects/](https://www.dronecode.org/projects/)). Esta es a su vez parte de la fundación Linux ([https://linuxfoundation.org/](https://linuxfoundation.org/)), la cual se dedica a fomentar el desarrollo y mantenimiento de proyectos de software libre. 
 
-<!-- 
 <table>
   <tr>
    <td>The Linux Foundation provides a neutral, trusted hub for developers to code, manage, and scale open technology projects
@@ -35,7 +34,6 @@ Existe un conjunto de proyectos open-source tanto de hardware como de software a
    </td>
   </tr>
 </table>
--->
 
 
 ## Hardware
