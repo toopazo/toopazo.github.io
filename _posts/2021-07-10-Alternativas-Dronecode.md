@@ -96,8 +96,7 @@ La primera parte de su utilidad está basada en el procesamiento de sensores ine
 
 $$\boldsymbol{\dot{x}} = [x,y,z,u,v,w,\theta,\phi,\psi,P,Q,R]^T$$
 
-donde $\boldsymbol{x}$ es el vector de estado,  $$[x,y,z]$$ la posición, $$[u,v,w]$$ la velocidad, $$[\theta,\phi,\psi]$$ la  posición angular (i.e. [ángulos de Euler](https://es.wikipedia.org/wiki/%C3%81ngulos_de_Euler)) y finalmente 
-$$[P,Q,R]$$ la velocidad angular. 
+donde $\boldsymbol{x}$ es el vector de estado,  $[x,y,z]$ la posición, $[u,v,w]$ la velocidad, $[\theta,\phi,\psi]$ la  posición angular (i.e. [ángulos de Euler](https://es.wikipedia.org/wiki/%C3%81ngulos_de_Euler)) y finalmente $[P,Q,R]$ la velocidad angular. 
 
 
 ### Control
@@ -116,7 +115,7 @@ Tanto Px4 como la mayoría de los software populares, utilizan las herramientas 
 
 $$\boldsymbol{\dot{x}} = \boldsymbol{A} \boldsymbol{x} + \boldsymbol{B} \boldsymbol{u}$$
 
-donde tanto A como B son matrices con coeficientes constantes, pero dependientes del punto de linealización. La derivación matemática queda para otro ocasión, pero para el caso específico de un multirrotores, el diseño es
+donde tanto $\boldsymbol{A}$ como $\boldsymbol{B}$ son matrices con coeficientes constantes, pero dependientes del punto de linealización. La derivación matemática queda para otro ocasión, pero para el caso específico de un multirrotores, el diseño es
 
 
 <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/px4_mc_control_arch.jpg" width="100%" alt="alt_text" title="image_tooltip" /> 
