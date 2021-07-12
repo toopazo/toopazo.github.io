@@ -76,7 +76,7 @@ Además de ya mencionado computador de vuelo es necesario contar con los siguien
 <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/aileron_servo_v1.jpg" width="45%" alt="alt_text" title="image_tooltip" /> 
 
 
-## Software {#software}
+## Software
 
 Px4 ([https://docs.px4.io/master/](https://docs.px4.io/master/)) es un software de vuelo que permite estimar el estado del vehículo y ejecutar algoritmos de control para estabilizar el vehículo aéreo, bucles de control PID u otros similares (e.g. model Following control, adaptive control, dynamic inversion y un largo etc). También forma parte de los proyectos apoyados por la fundación Dronecode.
 
