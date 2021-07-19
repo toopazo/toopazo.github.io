@@ -187,6 +187,9 @@ collections:
   talks:
     output: true
     permalink: /:collection/:path/
+  postscyt:
+    output: true
+    permalink: /:collection/:path/
 
 
 # Defaults
@@ -201,18 +204,7 @@ defaults:
       read_time: true
       comments: true
       share: true
-      related: true
-# _postscyt
-  - scope:
-      path: ""
-      type: postscyt
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true      
+      related: true 
   # _pages
   - scope:
       path: ""
