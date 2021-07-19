@@ -12,8 +12,11 @@ main:
 #  - title: "Portafolio"
 #    url: /portfolio/
         
-  - title: "Blog"
-    url: /year-archive/
+  - title: "Blog de CyT Drones"
+    url: /year-archive-cyt/
+
+  - title: "Blog de ensayos"
+    url: /year-archive-ens/
     
 #  - title: "CV"
 #    url: /cv/
