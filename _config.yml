@@ -190,6 +190,9 @@ collections:
   postscyt:
     output: true
     permalink: /:collection/:path/
+  postsens:
+    output: true
+    permalink: /:collection/:path/
 
 
 # Defaults

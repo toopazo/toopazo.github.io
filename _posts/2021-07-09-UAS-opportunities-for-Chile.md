@@ -2,7 +2,7 @@
 layout: archive
 title: "Opportunities for Chile in the coming UAS autonomy revolution"
 collection: postscyt
-description: "Urban Air Mobility (UAM) and Drone Package Delivery are two well known and powerful visions that are expected to radically change the landscape of aviation in the coming years. What could Chile do to take advantage of this coming revolution?"
+category: postscyt
 ---
 
 Urban Air Mobility (UAM) and Drone Package Delivery are two well known and powerful visions that are expected to radically change the landscape of aviation in the coming years. What could Chile do to take advantage of this coming revolution? 

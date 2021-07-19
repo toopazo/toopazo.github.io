@@ -1,4 +1,11 @@
-﻿Las compañías de Drones dominantes como DJI, Parrot, SenseFly, Freefly, etc, ofrecen al mercado soluciones cerradas de hardware y software. Sus vehículos son de muy buena calidad y su fama es merecida. Pero si nuestra intención es aprender, experimentar, modificar o innovar con esta tecnología, entonces existen alternativas mejores que nos permiten hacer todo esto y más.
+﻿---
+layout: archive
+title: "Alternativas open-source para vehículos aéreos no tripulados"
+collection: postscyt
+category: postscyt
+---
+
+Las compañías de Drones dominantes como DJI, Parrot, SenseFly, Freefly, etc, ofrecen al mercado soluciones cerradas de hardware y software. Sus vehículos son de muy buena calidad y su fama es merecida. Pero si nuestra intención es aprender, experimentar, modificar o innovar con esta tecnología, entonces existen alternativas mejores que nos permiten hacer todo esto y más.
 
 # Alternativas open-source para vehículos aéreos no tripulados
 
