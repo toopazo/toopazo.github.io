@@ -1,8 +1,9 @@
 Codigo fuente de pagina web personal 
 Basada en https://academicpages.github.io/
 
-Por el momento ocupo pdf2htmlEX para convertir mis articulos escritos en pdf a html
-Luego simplemente los agrego como links. 
+# Herramientas
+Se puede ocupar pdf2htmlEX para convertir mis articulos escritos en pdf a html
 
-e.g. [Alternativas Dronecode](http://toopazo.github.io/files/toopazo_alternativasDronecode.html)
+El sitio web https://www.garron.me/en/blog/multi-blog-site-jekyll.html indica como obtener dos blogs en una misma pagina web basada en Jekyll y alojada en Github
+
 
