@@ -13,7 +13,7 @@ main:
 #    url: /portfolio/
         
   - title: "Blog de CyT Drones"
-    url: /year-archive-cyt/
+    url: /postscyt/
 
   - title: "Blog de ensayos"
     url: /year-archive-ens/
