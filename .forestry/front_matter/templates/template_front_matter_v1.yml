@@ -1,9 +1,6 @@
 ---
----
-
----
 label: template_front_matter_v1
-hide_body: true
+hide_body: false
 fields:
 - type: text
   name: title
