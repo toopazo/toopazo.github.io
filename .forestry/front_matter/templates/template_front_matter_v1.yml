@@ -1,0 +1,19 @@
+---
+label: template_front_matter_v1
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: datetime
+  name: date
+  label: date
+- type: list
+  name: categories
+  label: categories
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: collection
+  label: collection
