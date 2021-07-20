@@ -1,15 +1,14 @@
 ---
-title: Test ensayo
-date: 2021-07-19 00:00:00 -07:00
+title: Probando un CMS para el blog
+date: {}
 categories:
-- postsens
+  - postsens
 layout: archive
 collection: postsens
+published: true
 ---
 
-# Probando un CMS para el blog
 
-El objetivo es probar forestry.io como CMS para este repo.
-
-Al parecer prose.io es la alternativa mas directa
-
+El objetivo es probar un CMS para editary agrar contenido a este sitio web 100% online
+- forestry.io como CMS para este repo.
+- Al parecer prose.io es la alternativa mas directa
