@@ -1,6 +1,6 @@
 ---
 title: Probando un CMS para el blog
-date: {}
+date: 2021-07-19
 categories:
   - postsens
 layout: archive
