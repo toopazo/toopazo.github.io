@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+
 # [Home page](https://toopazo.github.io/)
 
 ![](pajaroAndrea.jpg)

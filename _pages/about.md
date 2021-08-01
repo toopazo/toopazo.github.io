@@ -1,11 +1,11 @@
 ---
-permalink: /
-title: "Tecnología e investigación en vehículos aéreos autónomos"
-excerpt: "About me"
+title: Tecnología e investigación en vehículos aéreos autónomos
+permalink: "/"
+excerpt: About me
 author_profile: true
-redirect_from: 
-  - /about/
-  - /about.html
+redirect_from:
+- "/about/"
+- "/about.html"
 ---
 
 ¡Bienvenidos! 
