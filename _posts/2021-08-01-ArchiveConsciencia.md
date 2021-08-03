@@ -7,7 +7,7 @@ category: postsens
 
 
 ---
-## Aún en redacción
+## Ensayo aún en redacción
 - 2021-08-01
 - 2021-08-03
 ---
