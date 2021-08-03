@@ -1,8 +1,10 @@
 ﻿---
+
 layout: archive
 title: "Consciencia artificial y consciencia más allá de la muerte, ¿son posibles?"
 collection: postsens
 category: postsens
+
 ---
 
 
