@@ -5,12 +5,9 @@ collection: postsens
 category: postsens
 ---
 
-
----
 |Nota: Este ensayo está aún en redacción|
 |---|
 |2021-08-01 <br> 2021-08-04|
----
 
 El último Sábado del pasado mes de Julio del 2021 mi esposa eligió como panorama de tarde noche a la película ***Archive*** (2020). Se puede ver el resumen y notas en [imdb](https://www.imdb.com/title/tt6882604/) y [rotten tomatoes](https://www.rottentomatoes.com/m/archive). Fue una gran elección que nos dejo pensando durante el fin de semana. Tanto así que este ensayo nace de ahí.
 
