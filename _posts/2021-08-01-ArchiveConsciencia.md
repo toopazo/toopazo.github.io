@@ -27,7 +27,9 @@ Pero mi intención acá no es hacer una critica de cine sino analizar el concept
 - ¿Que tan posible es trasplantar una consciencia humana?
 - ¿Es la consciencia independiente de su continente (tanto sensorial como de sustrato)?
 
-## Consciencia e Inteligencia Artificial
+## Antecedentes previos
+
+### Consciencia e Inteligencia Artificial
 Muchísimo se ha dicho hasta hoy, y queda aun mucho por escribir acerca de la inteligencia artificial. Sin embargo lo primero que debemos buscar establecer es un definición acerca de que entendemos por el término. 
 
 ¿Es necesaria la noción de interior y exterior para la existencia de una 
