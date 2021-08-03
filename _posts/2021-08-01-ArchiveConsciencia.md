@@ -10,7 +10,7 @@ category: postsens
 </p>
  
 
-El último Sábado del pasado mes de Julio del 2021 mi esposa eligió como panorama de tarde noche a la película ***Archive (2020)***. Se puede ver el resumen y notas en [imdb](https://www.imdb.com/title/tt6882604/) y [rotten tomatoes](https://www.rottentomatoes.com/m/archive). Fue una gran elección que nos dejo pensando durante el fin de semana. Tanto así que este ensayo nace de ahí.
+El último Sábado del pasado mes de Julio del 2021 mi esposa eligió como panorama de tarde noche a la película ***Archive*** (2020). Se puede ver el resumen y notas en [imdb](https://www.imdb.com/title/tt6882604/) y [rotten tomatoes](https://www.rottentomatoes.com/m/archive). Fue una gran elección que nos dejo pensando durante el fin de semana. Tanto así que este ensayo nace de ahí.
 
 ***Archive*** no es ni de cerca la primera ni la última película de ciencia ficción que muestra los esfuerzo de excéntricos investigadores y compañías tratando de crear un robot humanoide dotado de una inteligencia artificial tan avanzada que confunda los limites entre un ser humano "real" y uno creado por la tecnología. 
 
