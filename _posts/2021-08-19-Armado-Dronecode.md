@@ -7,19 +7,27 @@ layout: archive
 collection: postscyt
 ---
 
-El presente escrito es la versión practica del [Alternativas Dronecode](toopazo.github.io/postscyt/Alternativas-Dronecode), un articulo anterior acerca de las alternativas open-source disponibles para volar un vehículo aéreo no tripulado. En particular explicaremos como armar un kit [S500 v2](https://shop.holybro.com/s500-v2-kitmotor2216-880kv-propeller1045_p1153.html) de la empresa Holybro. Aquí detallaremos paso a paso como armar y probar uno de estos aparatos.
+El presente escrito es la versión practica de [Alternativas Dronecode](toopazo.github.io/postscyt/Alternativas-Dronecode), un articulo anterior acerca de las alternativas open-source disponibles para volar un vehículo aéreo no tripulado. En particular explicaremos como armar un kit [S500 v2](https://shop.holybro.com/s500-v2-kitmotor2216-880kv-propeller1045_p1153.html) de la empresa Holybro. Aquí detallaremos paso a paso como armar y probar uno de estos aparatos.
 
 
 <img src="https://toopazo.github.io/images/holybro_S500_v2.jpg" width="30%" alt="alt_text" title="image_tooltip" /> 
 <img src="https://toopazo.github.io/images/holybro_S500_v2_juan2.jpeg" width="30%" alt="alt_text" title="image_tooltip" /> 
-<img src="https://toopazo.github.io/images/holybro_S500_v2_juan3.jpeg" width="25%" alt="alt_text" title="image_tooltip" />
+<img src="https://toopazo.github.io/images/holybro_S500_v2_juan3.jpeg" width="30%" alt="alt_text" title="image_tooltip" />
 
 
-|El siguiente es un artículo escrito con fines de divulgación y hecho con el mayor cuidado. Sin embargo no puedo garantizar que todo lo expuesto sea 100% correcto. Si encuentra algún error por favor háganmelo saber (ver sección de Contacto al final del documento).|
+|El siguiente es un artículo escrito con fines de divulgación y hecho con el mayor cuidado. Sin embargo no puedo garantizar que todo lo expuesto sea 100% correcto. Si encuentra algún error por favor háganmelo saber.|
 |--|
+|Historial de actualizaciones <ul><li>20-08-2021</li><li>21-08-2021</li></ul>|
 
-Historial de actualizaciones 
-- 08-20-2021
+
+Para los amantes del concepto open-source existen en la actualidad una seria de Kit de vehículos multirotor que pueden ser adquiridos y armados por alguien con relativamente poca experiencia. La idea de este escrito es reducir esa barrera aún más. Desde el punto de vista constructivo, es posible separar un multirotor en 3 partes: un esqueleto, actuadores y un computador de vuelo. 
+
+El tamaño, peso, geometría y numero de brazos del esqueleto viene definido por el tipo de misión que queremos lograr con el vehículo. ¿Necesitamos portar un sensor de gases en una industria?, entonces lo más probable es que necesitemos una estructura de tamaño medio, robusta y de peso medio alto. ¿Queremos transmitir vídeo en vivo?, es probable entonces que una estructura pequeña y liviana nos baste. ¿Necesitamos cargar cajas de un lado a otro?, es probable que necesitemos más hélices de lo usual y una estructura más pesada. 
+
+Los actuadores son la suma de ESC + Motores + Hélices. Los controladores de motor son conocidos en inglés como [Electronic Speed Controllers (ESC)](https://en.wikipedia.org/wiki/Electronic_speed_control) y son los encargados de regular su velocidad de giro. Para multirotores casi siempre se utilizan [motores de corriente continua y sin escobilla (burshless DC motors)](https://en.wikipedia.org/wiki/Brushless_DC_electric_motor). Finalmente las hélices son las laminas diseñadas para rotar y desplazar el aire circundante de manera de generar empuje. 
+
+![](https://toopazo.github.io/images/multirotor_actuator_v1.jpg)
+
 
 Existe un conjunto de proyectos open-source tanto de hardware como de software apoyados oficialmente por la fundación Dronecode ([https://www.dronecode.org/projects/](https://www.dronecode.org/projects/)). Esta es a su vez parte de la fundación Linux ([https://linuxfoundation.org/](https://linuxfoundation.org/)), la cual se dedica a fomentar el desarrollo y mantenimiento de proyectos de software libre. 
 
