@@ -30,7 +30,14 @@ Pero mi intención acá no es hacer una critica de cine sino analizar el concept
 ## Antecedentes previos
 
 ### Consciencia e Inteligencia Artificial
+www.diccionariodedudas.com/consciencia-o-conciencia/
+
 Muchísimo se ha dicho hasta hoy, y queda aun mucho por escribir acerca de la inteligencia artificial. Sin embargo lo primero que debemos buscar establecer es un definición acerca de que entendemos por el término. 
+
+Legg y Hutter escribieron en 2007 acerca de 
+
+Algoritmos para medir inteligencia en maquinas y animales pueden basarse en estrategias de recompensa ante comportamientos que ayuden a distinguir capacidades que queremos medir. Esto esta relacionado con las tecnicas de "reinforcement learning" (aprendizaje por refuerzo). 
+Relacionan inteligencia como la capacidad de un individuo -medida en relación al grupo- para lograr un determinado objetivo en un ambiente cambiante, nuevo o desafiante. En otras palabras, la capacidad de aprender y emplear la experiencia en la consecución de un objetivo. 
 
 ¿Es necesaria la noción de interior y exterior para la existencia de una 
 consciencia? ¿Se puede tener consciencia sin noción de un mundo exterior?
@@ -80,5 +87,7 @@ modificarla al instante?
 - [] Villarino, Hernán. (2001). La Antoniana Margarita de Gómez Pereira y el origen de la controversia sobre el mecanicismo animal entre realismo, idealismo y materialismo (Ejercicio de exploración de una vía indirecta de retorno a la escolástica. Revista chilena de neuro-psiquiatría, 39(4), 316-328. https://dx.doi.org/10.4067/S0717-92272001000400007
 - [] Ponce, Javier Bandrés, and Rafael Llavona Uribelarrea. "Bestias sin alma." Revista de libros 62 (2002): 11-13.
 - [] Nesse, Randolph. (2016) The Body Is Not A Machine [link as seen in August 2021](https://renovatio.zaytuna.edu/article/language-is-not-mechanical-and-neither-are-you)
+- [] https://www.scientificamerican.com/article/learning-to-live-in-steven-weinbergs-pointless-universe/?utm_source=pocket-newtab
+- [] Legg, Shane, and Marcus Hutter. "Universal intelligence: A definition of machine intelligence." Minds and machines 17, no. 4 (2007): 391-444.
 
 

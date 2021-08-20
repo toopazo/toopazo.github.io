@@ -1,26 +1,25 @@
 ---
-title: Alternativas open-source para vehículos aéreos no tripulados
-date: 2021-07-10 00:00:00 -07:00
-categories:
+title: Armado de un vehículo aéreo no tripulado open-source
+date: 2021-08-19
+categories: 
 - postscyt
 layout: archive
 collection: postscyt
 ---
 
-Las compañías de Drones dominantes como DJI, Parrot, SenseFly, Freefly, etc, ofrecen al mercado soluciones cerradas de hardware y software. Sus vehículos son de muy buena calidad y su fama es merecida. Pero si nuestra intención es aprender, experimentar, modificar o innovar con esta tecnología, entonces existen alternativas mejores que nos permiten hacer todo esto y más.
+El presente escrito es la versión practica del [Alternativas Dronecode](toopazo.github.io/postscyt/Alternativas-Dronecode), un articulo anterior acerca de las alternativas open-source disponibles para volar un vehículo aéreo no tripulado. En particular explicaremos como armar un kit [S500 v2](https://shop.holybro.com/s500-v2-kitmotor2216-880kv-propeller1045_p1153.html) de la empresa Holybro. Aquí detallaremos paso a paso como armar y probar uno de estos aparatos.
 
 
-<img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/dji_matrice_300rtk.jpg" width="30%" alt="alt_text" title="image_tooltip" /> 
-<img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/freefly_astro.jpeg" width="30%" alt="alt_text" title="image_tooltip" /> 
-<img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/sensefly_ebee.jpeg" width="25%" alt="alt_text" title="image_tooltip" />
+<img src="https://toopazo.github.io/images/holybro_S500_v2.jpg" width="30%" alt="alt_text" title="image_tooltip" /> 
+<img src="https://toopazo.github.io/images/holybro_S500_v2_juan2.jpeg" width="30%" alt="alt_text" title="image_tooltip" /> 
+<img src="https://toopazo.github.io/images/holybro_S500_v2_juan3.jpeg" width="25%" alt="alt_text" title="image_tooltip" />
+
 
 |El siguiente es un artículo escrito con fines de divulgación y hecho con el mayor cuidado. Sin embargo no puedo garantizar que todo lo expuesto sea 100% correcto. Si encuentra algún error por favor háganmelo saber (ver sección de Contacto al final del documento).|
 |--|
 
 Historial de actualizaciones 
-- 06-07-2021
-- 07-07-2021 
-- 08-19-2021
+- 08-20-2021
 
 Existe un conjunto de proyectos open-source tanto de hardware como de software apoyados oficialmente por la fundación Dronecode ([https://www.dronecode.org/projects/](https://www.dronecode.org/projects/)). Esta es a su vez parte de la fundación Linux ([https://linuxfoundation.org/](https://linuxfoundation.org/)), la cual se dedica a fomentar el desarrollo y mantenimiento de proyectos de software libre. 
 
@@ -30,7 +29,7 @@ Existe un conjunto de proyectos open-source tanto de hardware como de software a
    </td>
   </tr>
   <tr>
-   <td>The Dronecode Foundation fosters communities and innovation through <strong>open-standards</strong> using <strong>open-source</strong>. Dronecode is a <strong>vendor-neutral foundation</strong> for open source drone projects. We are a US-based non-profit under the Linux Foundation and provide open source <strong>governance, infrastructure,</strong> and <strong>services</strong> to software & hardware projects. We work with developers, end-users, and adopting vendors from around the world.
+   <td>The Dronecode Foundation fosters communities and innovation through <strong>open-standards</strong> using <strong>open-source</strong>. Dronecode is a <strong>vendor-neutral foundation</strong> for open source drone projects. We are a US-based non-profit under the Linux Foundation and provide open source<strong> </strong> <p> <strong>governance, infrastructure,</strong> and <strong>services</strong> to software & hardware projects. We work with developers, end-users, and adopting vendors from around the world.
    </td>
   </tr>
 </table>
