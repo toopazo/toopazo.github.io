@@ -57,7 +57,7 @@ Finalmente tenemos el computador de vuelo, el cual es el encargado de estimar la
  </center>
 </figure> 
 
-## 2) Ensamble mecánico
+## 2) Armado mecánico y configuración inicial
 
 Este paso depende en un 100% del modelo que se haya comprado. Cada fabricante cuenta (o debería contar) con un manual de instrucción en que detalle este proceso. En nuestro caso Holybro provee de [este enlace al manual](http://www.holybro.com/manual/S500_V2_Kit_AssemblyManual.pdf). Con casi el mismo contenido Px4 también provee instrucciones de armado en [este otro enlace](https://docs.px4.io/master/en/frames_multicopter/holybro_s500_v2_pixhawk4.html).
 
@@ -67,7 +67,27 @@ Existen además múltiples tutoriales y una muy buena serie de videos en Youtube
 - [Pixhawk 4 Receiver and Transmitter Configuration | Pixhawk 4 + S500 Drone Build Tutorial | Part 3](https://www.youtube.com/watch?v=w40P1CQQ9Ls)
 - [Pixhawk 4 Setup and Calibration with QGroundControl | Pixhawk 4 + S500 Drone Build Tutorial | Part 4](https://www.youtube.com/watch?v=BNzeVGD8IZI)
 
-## 3) Verificación
+Más abajo se puede ver una sucinta serie de fotos de nuestra experiencia en el armado
+
+<figure>
+ <center>
+  <img src="https://toopazo.github.io/images/holybro_S500_v2_juan4.jpeg" style="width:30%" alt="alt_text" title="image_tooltip" /> 
+  <img src="https://toopazo.github.io/images/holybro_S500_v2_juan7.jpeg" style="width:30%" alt="alt_text" title="image_tooltip" /> 
+  <img src="https://toopazo.github.io/images/holybro_S500_v2_juan9.jpeg" style="width:30%" alt="alt_text" title="image_tooltip" />
+  <figcaption> Kit S500 de Holybro, armado por Juan Cespedes, Agosto 2021 (parte 1) </figcaption>
+ </center>
+</figure> 
+<figure>
+ <center>
+  <img src="https://toopazo.github.io/images/holybro_S500_v2_juan1.jpeg" style="width:30%" alt="alt_text" title="image_tooltip" /> 
+  <img src="https://toopazo.github.io/images/holybro_S500_v2_juan2.jpeg" style="width:30%" alt="alt_text" title="image_tooltip" /> 
+  <img src="https://toopazo.github.io/images/holybro_S500_v2_juan3.jpeg" style="width:30%" alt="alt_text" title="image_tooltip" />
+  <figcaption> Kit S500 de Holybro, armado por Juan Cespedes, Agosto 2021 (parte 2) </figcaption>
+ </center>
+</figure> 
+
+
+## 3) Verificación y evaluación
 
 Luego del armado mecánico es imprescindible realizar una verificación tanto de actuadores, conexiones eléctricas y del computador de vuelo. Ahora detallamos los pasos seguidos para corregir los errores que encontramos en nuestra experiencia.
 
@@ -87,9 +107,9 @@ Paso 2: Verificar que la ubicación de cada motor en el esqueleto corresponda co
   <img src="https://toopazo.github.io/images/holybro_quadrotor_x.png" style="width:70%" alt="alt_text" title="image_tooltip" />
   <figcaption> Airframe <a href="https://docs.px4.io/master/en/airframes/airframe_reference.html#quadrotor-x">Quadrotor x (SYS_AUTOSTART = 4015)</a> </figcaption>
  </center>
-</figure> 
+</figure>
 
-Paso 3: Verificar que el sentido de giro de los motores y las hélices coincidan con el tipo de "airframe" indicado, en nuestro caso "Quadrotor x" (SYS_AUTOSTART = 4015).
+Paso 3: Verificar que el sentido de giro de los motores coincidan con el tipo de "airframe" indicado, en nuestro caso "Quadrotor x" (SYS_AUTOSTART = 4015).
 
 Tal como lo muestra la imagen del paso anterior, los motores deben girar en una determinada dirección. En caso de que el motor no gire en el sentido correcto la solución más sencilla es intercambiar dos de los tres cables que van desde el ESC al motor. 
 
@@ -99,5 +119,23 @@ Tal como lo muestra la imagen del paso anterior, los motores deben girar en una 
   <figcaption> Intercambio de cables necesarios entre el ESC y el motor para cambiar el sentido de giro </figcaption>
  </center>
 </figure> 
+
+Paso 4: Verificar que el sentido de giro de las hélices coincidan con el tipo de "airframe" indicado, en nuestro caso "Quadrotor x" (SYS_AUTOSTART = 4015).
+
+Las hélices empleadas en estos kits y todas las comercializadas en el segmento multirotor vienen en dos tipos: horarias y anti-horarias. Cada hélice está diseñada para girar en un solo sentido. Si se gira en sentido contrario pasan dos cosas: 1) trabajará de manera ineficiente y produciendo una fuerza en sentido contrario (hacia abajo) y 2) si es de tipo "rosca" terminara desprendiéndose del eje del motor. 
+
+<figure>
+ <center>
+  <img src="https://toopazo.github.io/images/helices_rotacion.png" style="width:70%" alt="alt_text" title="image_tooltip" />
+  <figcaption> Hélice de rotación ani-horario (tapa negra) y horaria (tapa plateada) y su vista lateral </figcaption>
+ </center>
+</figure> 
+
+
+
+
+
+
+
 
 
