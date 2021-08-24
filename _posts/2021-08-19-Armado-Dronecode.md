@@ -92,7 +92,7 @@ Paso 2: Verificar que la ubicación de cada motor en el esqueleto corresponda co
 <figure>
  <img src="https://toopazo.github.io/images/holybro_quadrotor_x.png" style="width:30%" alt="alt_text" />  
 </figure> 
-<figcaption> Quadrotor x (SYS_AUTOSTART = 4015) </figcaption>
+<figcaption> Ubicación y sentido de giro de los motores en el modelo Quadrotor x (SYS_AUTOSTART = 4015) </figcaption>
 </center>
 
 
@@ -118,9 +118,15 @@ Existen además diferentes tipos de mecanismos de sujeción entre la hélice y e
 
 <figure>
   <img src="https://toopazo.github.io/images/kde_adapter.png" style="width:70%" style="text-align: center;" alt="alt_text" class="center" />
-  <figcaption> Adaptador para la fijación de la hélice al motor </figcaption>
+  <figcaption> Adaptador para la fijación de la hélice al motor, frecuente en modelos más avanzados </figcaption>
 </figure> 
 
+El otro tipo de mecanismo es más simple y consta de un rosca o hilo que traba la hélice de modo que ésta se mantiene apretada en la medida que gire en la dirección correcta. Lo esencial para este tipo de fijación es recordar que lo que importa es que el sentido de giro del motor se correcto (paso anterior) y que al hacerlo la hélice se trabe. Esto se puede comprobar moviendo con los dedos el motor según lo indicado en el paso anterior y mantener la hélice con otra mano oponiéndose al movimiento. Si la hélice se suelta es de giro incorrecto, si se aprieta es de giro correcto. 
+
+<figure>
+  <img src="https://toopazo.github.io/images/kde_adapter_rosca.png" style="width:70%" style="text-align: center;" alt="alt_text" class="center" />
+  <figcaption> Rosca o hilo la fijación de la hélice al motor, frecuente en modelos más básicos </figcaption>
+</figure> 
 
 
 
