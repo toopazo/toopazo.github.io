@@ -153,8 +153,3 @@ ADS-B (i.e [Automatic Dependent Surveillance-Broadcast](https://en.wikipedia.org
 2. Bucles de control en el PX4 [https://docs.px4.io/master/en/flight_stack/controller_diagrams.html#multicopter-control-architecture](https://docs.px4.io/master/en/flight_stack/controller_diagrams.html#multicopter-control-architecture)
 
 
-## Contacto
-
-Tomas I. Opazo
-toopazo (at / arroba / @) protonmail.com
-
