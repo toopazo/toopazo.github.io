@@ -78,7 +78,7 @@ Luego del armado mecánico es imprescindible realizar una verificación tanto de
 
 <figure>
  <center>
-  <img src="https://toopazo.github.io/images/holybro_S500_v2_armado_1.png" style="width:70%" alt="alt_text" title="image_tooltip" />
+  <img src="https://toopazo.github.io/images/holybro_quadrotor_x.png" style="width:70%" alt="alt_text" title="image_tooltip" />
   <figcaption>Airframe [Quadrotor x (SYS_AUTOSTART = 4015)](https://docs.px4.io/master/en/airframes/airframe_reference.html#quadrotor-x)</figcaption>
  </center>
 </figure> 
