@@ -20,7 +20,7 @@ Las compañías de Drones dominantes como DJI, Parrot, SenseFly, Freefly, etc, o
 |Historial de actualizaciones <ul><li>06-07-2021</li><li>07-07-2021</li><li>19-08-2021</li></ul>|
 
 
-Existe un conjunto de proyectos open-source tanto de hardware como de software apoyados oficialmente por la fundación Dronecode ([https://www.dronecode.org/projects/](https://www.dronecode.org/projects/)). Esta es a su vez parte de la fundación Linux ([https://linuxfoundation.org/](https://linuxfoundation.org/)), la cual se dedica a fomentar el desarrollo y mantenimiento de proyectos de software libre. 
+Existen un conjunto de proyectos open-source tanto de hardware como de software apoyados oficialmente por la fundación Dronecode ([https://www.dronecode.org/projects/](https://www.dronecode.org/projects/)). Esta es a su vez parte de la fundación Linux ([https://linuxfoundation.org/](https://linuxfoundation.org/)), la cual se dedica a fomentar el desarrollo y mantenimiento de proyectos de software libre. 
 
 <table>
   <tr>
