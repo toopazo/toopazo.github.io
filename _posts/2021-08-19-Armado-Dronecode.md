@@ -7,19 +7,19 @@ layout: archive
 collection: postscyt
 ---
 
-El presente escrito es la versión practica de [Alternativas Dronecode](toopazo.github.io/postscyt/Alternativas-Dronecode), un articulo anterior acerca de las alternativas open-source disponibles para volar un vehículo aéreo no tripulado. En particular explicaremos los componentes principales de todo multirotor, y nuestra experiencia al armar un kit [S500 v2](https://shop.holybro.com/s500-v2-kitmotor2216-880kv-propeller1045_p1153.html) de la empresa Holybro. Más que el armado en si mismo trataremos de contar la estructura general de todo vehículo así como los pasos que seguimos para verificar su correcto armado y vuelo.
+El presente escrito es la versión practica de [Alternativas Dronecode](toopazo.github.io/postscyt/Alternativas-Dronecode), un articulo anterior acerca de las alternativas open-source disponibles para volar un vehículo aéreo no tripulado. En particular explicaremos los componentes principales de todo multirotor, y nuestra experiencia al armar un kit [S500 v2](https://shop.holybro.com/s500-v2-kitmotor2216-880kv-propeller1045_p1153.html) de la empresa Holybro. Más que el armado en si mismo trataremos de describir la estructura general de todo vehículo así como los pasos que seguimos para verificar su correcto armado y vuelo.
 
 <figure>
-  <img src="https://toopazo.github.io/images/holybro_S500_v2.jpg" style="width:25%" alt="alt_text" class="center" /> 
-  <img src="https://toopazo.github.io/images/holybro_S500_v2_juan2.jpeg" style="width:30%" alt="alt_text" class="center" /> 
-  <img src="https://toopazo.github.io/images/holybro_S500_v2_juan3.jpeg" style="width:30%" alt="alt_text" class="center" />
+  <img src="https://toopazo.github.io/images/holybro_S500_v2.jpg" style="width:25%" alt="alt_text" /> 
+  <img src="https://toopazo.github.io/images/holybro_S500_v2_juan2.jpeg" style="width:30%" alt="alt_text" /> 
+  <img src="https://toopazo.github.io/images/holybro_S500_v2_juan3.jpeg" style="width:30%" alt="alt_text" />
   <figcaption> Kit S500 de Holybro, armado por Juan Cespedes, Agosto 2021 </figcaption>
 </figure> 
 
 
 |El siguiente es un artículo escrito con fines de divulgación y hecho con el mayor cuidado. Sin embargo no puedo garantizar que todo lo expuesto sea 100% correcto. Si encuentra algún error por favor háganmelo saber.|
 |--|
-|Historial de actualizaciones <ul><li>20-08-2021</li><li>21-08-2021</li></ul>|
+|Historial de actualizaciones <ul><li>20-08-2021</li><li>21-08-2021</li><li>24-08-2021</li></ul>|
 
 
 ## 1) Componentes principales de un multirotor
@@ -38,14 +38,14 @@ Una simple búsqueda en la web por "frame kit multirotor drone" nos arroja una s
 Los actuadores son la suma de ESC + Motores + Hélices. Los controladores de motor son conocidos en inglés como [Electronic Speed Controllers (ESC)](https://en.wikipedia.org/wiki/Electronic_speed_control) y son los encargados de regular su velocidad de giro. Para multirotores casi siempre se utilizan [motores de corriente continua y sin escobilla (burshless DC motors)](https://en.wikipedia.org/wiki/Brushless_DC_electric_motor). Finalmente las hélices son las laminas diseñadas para rotar y desplazar el aire circundante de manera de generar empuje. 
 
 <figure>
-  <img src="https://toopazo.github.io/images/multirotor_actuator_v1.jpg" style="width:70%" alt="alt_text" class="center" />
+  <img src="https://toopazo.github.io/images/multirotor_actuator_v1.jpg" style="width:70%" alt="alt_text" />
   <figcaption> Ejemplo de ESC + motor + hélice usados comúnmente </figcaption>
 </figure> 
 
 Finalmente tenemos el computador de vuelo, el cual es el encargado de estimar la posición y orientación del vehículo usando sensores inerciales, GPS y otros. Es además el encargado de coordinar los sistemas de radio, control remoto y demás electrónica. El computador en si mismo contiene los sensores más todo el software de vuelo.
 
 <figure>
-  <img src="https://toopazo.github.io/images/pixhawk4_wiring_overview.png" style="width:70%" alt="alt_text" class="center" />
+  <img src="https://toopazo.github.io/images/pixhawk4_wiring_overview.png" style="width:70%" alt="alt_text" />
   <figcaption> Ejemplo de computador de vuelo, fuente: <a href="https://docs.px4.io/master/en/assembly/quick_start_pixhawk4.html">docs.px4.io</a> </figcaption>
 </figure> 
 
@@ -62,31 +62,31 @@ Existen además múltiples tutoriales y una muy buena serie de videos en Youtube
 Más abajo se puede ver una sucinta serie de fotos de nuestra experiencia en el armado
 
 <figure>
-  <img src="https://toopazo.github.io/images/holybro_S500_v2_juan4.jpeg" style="width:30%" alt="alt_text" class="center" /> 
-  <img src="https://toopazo.github.io/images/holybro_S500_v2_juan7.jpeg" style="width:30%" alt="alt_text" class="center" /> 
-  <img src="https://toopazo.github.io/images/holybro_S500_v2_juan9.jpeg" style="width:30%" alt="alt_text" class="center" />
+  <img src="https://toopazo.github.io/images/holybro_S500_v2_juan4.jpeg" style="width:30%" alt="alt_text" /> 
+  <img src="https://toopazo.github.io/images/holybro_S500_v2_juan7.jpeg" style="width:30%" alt="alt_text" /> 
+  <img src="https://toopazo.github.io/images/holybro_S500_v2_juan9.jpeg" style="width:30%" alt="alt_text" />
   <figcaption> Kit S500 de Holybro, armado por Juan Cespedes, Agosto 2021 (parte 1) </figcaption>
 </figure> 
 <figure>
-  <img src="https://toopazo.github.io/images/holybro_S500_v2_juan1.jpeg" style="width:30%" alt="alt_text" class="center" /> 
-  <img src="https://toopazo.github.io/images/holybro_S500_v2_juan2.jpeg" style="width:30%" alt="alt_text" class="center" /> 
-  <img src="https://toopazo.github.io/images/holybro_S500_v2_juan3.jpeg" style="width:30%" alt="alt_text" class="center" />
+  <img src="https://toopazo.github.io/images/holybro_S500_v2_juan1.jpeg" style="width:30%" alt="alt_text" /> 
+  <img src="https://toopazo.github.io/images/holybro_S500_v2_juan2.jpeg" style="width:30%" alt="alt_text" /> 
+  <img src="https://toopazo.github.io/images/holybro_S500_v2_juan3.jpeg" style="width:30%" alt="alt_text" />
   <figcaption> Kit S500 de Holybro, armado por Juan Cespedes, Agosto 2021 (parte 2) </figcaption>
 </figure> 
 
 
-## 3) Verificación y evaluación
+## 3) Verificación previa al primer vuelo
 
 Luego del armado mecánico es imprescindible realizar una verificación tanto de actuadores, conexiones eléctricas y del computador de vuelo. Ahora detallamos los pasos seguidos para corregir los errores que encontramos en nuestra experiencia.
 
-Paso 1:  Verificar que la señal de control de cada motor este correctamente conectada con el computador de vuelo, en posición y polaridad.
+- Paso 1:  Verificar que la señal de control de cada motor este correctamente conectada con el computador de vuelo, en posición y polaridad.
 
 <figure>
-  <img src="https://toopazo.github.io/images/holybro_S500_v2_armado_1.png" style="width:60%" alt="alt_text" class="center" />
+  <img src="https://toopazo.github.io/images/holybro_S500_v2_armado_1.png" style="width:60%" alt="alt_text" />
   <figcaption> Orden y polaridad de conexión entre computador de vuelo y motores </figcaption>
 </figure> 
 
-Paso 2: Verificar que la ubicación de cada motor en el esqueleto corresponda con el tipo de "airframe" indicado, en nuestro caso "Quadrotor x" (SYS_AUTOSTART = 4015).
+- Paso 2: Verificar que la ubicación de cada motor en el esqueleto corresponda con el tipo de "airframe" indicado, en nuestro caso "Quadrotor x" (SYS_AUTOSTART = 4015).
 
 <center>
 <figure>
@@ -96,41 +96,43 @@ Paso 2: Verificar que la ubicación de cada motor en el esqueleto corresponda co
 </center>
 
 
-Paso 3: Verificar que el sentido de giro de los motores coincidan con el tipo de "airframe" indicado, en nuestro caso "Quadrotor x" (SYS_AUTOSTART = 4015).
+- Paso 3: Verificar que el sentido de giro de los motores coincidan con el tipo de "airframe" indicado, en nuestro caso "Quadrotor x" (SYS_AUTOSTART = 4015).
 
 Tal como lo muestra la imagen del paso anterior, los motores deben girar en una determinada dirección. En caso de que el motor no gire en el sentido correcto la solución más sencilla es intercambiar dos de los tres cables que van desde el ESC al motor. 
 
 <figure>
-  <img src="https://toopazo.github.io/images/holybro_S500_spin_swap.jpeg" style="width:70%" alt="alt_text" class="center" />
+  <img src="https://toopazo.github.io/images/holybro_S500_spin_swap.jpeg" style="width:70%" alt="alt_text" />
   <figcaption> Intercambio de cables necesarios entre el ESC y el motor para cambiar el sentido de giro </figcaption>
 </figure> 
 
-Paso 4: Verificar que el sentido de giro de las hélices coincidan con el tipo de "airframe" indicado, en nuestro caso "Quadrotor x" (SYS_AUTOSTART = 4015).
+- Paso 4: Verificar que el sentido de giro de las hélices coincidan con el tipo de "airframe" indicado, en nuestro caso "Quadrotor x" (SYS_AUTOSTART = 4015).
 
 Las hélices empleadas en estos kits y todas las comercializadas en el segmento multirotor vienen en dos tipos: horarias y anti-horarias. Cada hélice está diseñada para girar en un solo sentido. Si se gira en sentido contrario pasan dos cosas: 1) trabajará de manera ineficiente y produciendo una fuerza en sentido contrario (hacia abajo) y 2) si es de tipo "rosca" terminara desprendiéndose del eje del motor. 
 
 <figure>
-  <img src="https://toopazo.github.io/images/helices_rotacion.png" style="width:70%" style="text-align: center;" alt="alt_text" class="center" />
+  <img src="https://toopazo.github.io/images/helices_rotacion.png" style="width:70%" alt="alt_text" />
   <figcaption> Hélice de rotación ani-horario (tapa negra) y horaria (tapa plateada) y su vista lateral </figcaption>
 </figure> 
 
-Existen además diferentes tipos de mecanismos de sujeción entre la hélice y el motor. Las hélices más avanzadas tienden a tener adaptadores que se unen con pernos a la caraza de giro del motor. De esta manera la hélice queda sujeta independiente del sentido de giro. Obviamente si la hélice gira en sentido incorrecto no habrá la generación de fuerza deseada.
+Existen además diferentes tipos de mecanismos de sujeción entre la hélice y el motor. Las hélices más avanzadas tienden a tener adaptadores que se unen con pernos a la carcasa de giro del motor. De esta manera la hélice queda sujeta independiente del sentido de giro. Obviamente si la hélice gira en sentido incorrecto no habrá la generación de fuerza deseada.
 
 <figure>
-  <img src="https://toopazo.github.io/images/kde_adapter.png" style="width:70%" style="text-align: center;" alt="alt_text" class="center" />
+  <img src="https://toopazo.github.io/images/kde_adapter.png" style="width:100%" alt="alt_text" />
   <figcaption> Adaptador para la fijación de la hélice al motor, frecuente en modelos más avanzados </figcaption>
 </figure> 
 
-El otro tipo de mecanismo es más simple y consta de un rosca o hilo que traba la hélice de modo que ésta se mantiene apretada en la medida que gire en la dirección correcta. Lo esencial para este tipo de fijación es recordar que lo que importa es que el sentido de giro del motor se correcto (paso anterior) y que al hacerlo la hélice se trabe. Esto se puede comprobar moviendo con los dedos el motor según lo indicado en el paso anterior y mantener la hélice con otra mano oponiéndose al movimiento. Si la hélice se suelta es de giro incorrecto, si se aprieta es de giro correcto. 
+Un segundo tipo de mecanismo más simple consta de un rosca o hilo que traba la hélice de modo que ésta se mantiene apretada en la medida que gire en la dirección correcta. Lo esencial para este tipo de fijación es recordar que lo que importa es que el sentido de giro del motor sea correcto (ver paso anterior) y que al hacerlo la hélice se trabe. Esto se puede comprobar moviendo con los dedos el motor según lo indicado en el paso anterior y tocar la hélice con otra mano oponiéndose al movimiento. Si la hélice se suelta es de giro incorrecto, si se aprieta es de giro correcto. 
+
+**Es muy importante realizar esta comprobación SIN BATERÍAS conectadas y sin haber energizado los motores. Solo se deben hacer girar los motores con las hélices montadas en el día, lugar y hora en la que se va a volar.**
 
 <figure>
-  <img src="https://toopazo.github.io/images/kde_adapter_rosca.png" style="width:70%" style="text-align: center;" alt="alt_text" class="center" />
-  <figcaption> Rosca o hilo la fijación de la hélice al motor, frecuente en modelos más básicos </figcaption>
+  <img src="https://toopazo.github.io/images/kde_adapter_rosca.png" style="width:100%" alt="alt_text" />
+  <figcaption> Rosca o hilo para la fijación de la hélice al motor, frecuente en modelos más básicos </figcaption>
 </figure> 
 
 
+## 4) Primer vuelo
 
-
-
+Aún por realizarse
 
 
