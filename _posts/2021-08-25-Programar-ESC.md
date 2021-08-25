@@ -13,9 +13,8 @@ El presente escrito es un reporte acerca de mi experiencia programando un ESC pa
   <img src="https://toopazo.github.io/images/uavcan_esc.png" style="width:25%" alt="alt_text" /> 
   <img src="https://toopazo.github.io/images/castle_phoenix_edge_hv_80.jpg" style="width:30%" alt="alt_text" /> 
   <img src="https://toopazo.github.io/images/kde-uas85uvc.jpg" style="width:30%" alt="alt_text" />
-  <figcaption> Diferentes modelos de ESC usados en multirotores: [Orel y Kotleta](https://docs.px4.io/master/en/uavcan/escs.html), Phoenix Edge y KDE-UAS </figcaption>
+  <figcaption> Diferentes modelos de ESC usados en multirotores: Orel y Kotleta (UAVCAN), Phoenix Edge y KDE-UAS </figcaption>
 </figure> 
-
 
 |El siguiente es un artículo escrito con fines de divulgación y hecho con el mayor cuidado. Sin embargo no puedo garantizar que todo lo expuesto sea 100% correcto. Si encuentra algún error por favor háganmelo saber.|
 |--|
