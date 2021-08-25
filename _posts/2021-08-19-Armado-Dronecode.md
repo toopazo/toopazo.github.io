@@ -31,7 +31,7 @@ El tamaño, peso, geometría y numero de brazos del esqueleto viene definido por
 Una simple búsqueda en la web por "frame kit multirotor drone" nos arroja una serie de alternativas para distintos propósitos: fotografía, carrera de Drones, filmación, carga, etc. 
 
 <figure>
-  <img src="https://toopazo.github.io/images/uav_frame_kit.png" style="width:80%" alt="alt_text" class="center"/> 
+  <img src="https://toopazo.github.io/images/uav_frame_kit.png" style="width:90%" alt="alt_text" class="center"/> 
   <figcaption> Ejemplo de kits disponibles para armado de Drones, precio en USD </figcaption>
 </figure> 
 
@@ -45,7 +45,7 @@ Los actuadores son la suma de ESC + Motores + Hélices. Los controladores de mot
 Finalmente tenemos el computador de vuelo, el cual es el encargado de estimar la posición y orientación del vehículo usando sensores inerciales, GPS y otros. Es además el encargado de coordinar los sistemas de radio, control remoto y demás electrónica. El computador en si mismo contiene los sensores más todo el software de vuelo.
 
 <figure>
-  <img src="https://toopazo.github.io/images/pixhawk4_wiring_overview.png" style="width:70%" alt="alt_text" />
+  <img src="https://toopazo.github.io/images/pixhawk4_wiring_overview.png" style="width:80%" alt="alt_text" />
   <figcaption> Ejemplo de computador de vuelo, fuente: <a href="https://docs.px4.io/master/en/assembly/quick_start_pixhawk4.html">docs.px4.io</a> </figcaption>
 </figure> 
 
