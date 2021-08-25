@@ -10,9 +10,9 @@ collection: postscyt
 El presente escrito es un reporte acerca de mi experiencia programando un ESC para obtener datos en linea. Un ESC es un controlador para motores sin escobilla que aumenta o disminuye la potencia inyectada al motor para así regular su velocidad de giro. Obtener datos instantáneos como voltaje, corriente y sobretodo velocidad del motor son de vital importancia para estimar el consumo de cada rotor y pueden ser usado incluso como parte del controlador de vuelo.
 
 <figure>
-  <img src="https://toopazo.github.io/images/uavcan_esc.png" style="width:25%" alt="alt_text" /> 
-  <img src="https://toopazo.github.io/images/castle_phoenix_edge_hv_80.jpg" style="width:30%" alt="alt_text" /> 
-  <img src="https://toopazo.github.io/images/kde-uas85uvc.jpg" style="width:30%" alt="alt_text" />
+  <img src="https://toopazo.github.io/images/uavcan_esc.png" style="width:45%" alt="alt_text" /> 
+  <img src="https://toopazo.github.io/images/castle_phoenix_edge_hv_80.jpg" style="width:25%" alt="alt_text" /> 
+  <img src="https://toopazo.github.io/images/kde-uas85uvc.jpg" style="width:25%" alt="alt_text" />
   <figcaption> Diferentes modelos de ESC usados en multirotores: Orel y Kotleta (UAVCAN), Phoenix Edge y KDE-UAS </figcaption>
 </figure> 
 
