@@ -24,13 +24,12 @@ El presente escrito es un reporte acerca de mi experiencia programando un ESC pa
 
 El ESC exacto en ser probado corresponde al modelo [Phoenix Edge HV 80 AMP ESC](https://www.castlecreations.com/en/commercial/phoenix-edge-hv80-esc-010-0105-00), el cual es programado usando el adaptador [Castle Link v3 USB programming kit](https://www.castlecreations.com/en/castle-link-v3-usb-programming-kit-011-0119-00), este corresponde a un simple y ordinario conversor serial FTDI, pero que venden por unos 20 USD, una triquiñuela para sacar algo de dinero extra. Pero bueno, eso es tema para otro día. 
 
-Una vez teniendo el ESC y el adaptador USB debemos descargar el programa [Castle Link Software](https://home.castlecreations.com/download-castle-link/). Esta disponible para Windows solamente, pero podemos instalar una maquina virtual si es que estamos en Linux.
-
-
 <figure>
   <img src="https://toopazo.github.io/images/castle_link_programmer.jpeg" style="width:90%" alt="alt_text" />
   <figcaption> Conexión entre el programador USB (Castle Link v3 USB programming kit) y el ESC </figcaption>
 </figure> 
+
+Una vez teniendo conectado el ESC al programador USB debemos descargar el programa [Castle Link Software](https://home.castlecreations.com/download-castle-link/). Esta disponible para Windows solamente, pero podemos instalar una maquina virtual si es que estamos en Linux.
 
 <figure>
   <img src="https://toopazo.github.io/images/castle_enable_live_link.png" style="width:90%" alt="alt_text" />
