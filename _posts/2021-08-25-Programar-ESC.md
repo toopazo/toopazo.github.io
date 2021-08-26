@@ -26,12 +26,18 @@ El ESC exacto en ser probado corresponde al modelo [Phoenix Edge HV 80 AMP ESC](
 
 Una vez teniendo el ESC y el adaptador USB debemos descargar el programa [Castle Link Software](https://home.castlecreations.com/download-castle-link/). Esta disponible para Windows solamente, pero podemos instalar una maquina virtual si es que estamos en Linux.
 
+
+<figure>
+  <img src="https://toopazo.github.io/images/castle_link_programmer.jpeg" style="width:90%" alt="alt_text" />
+  <figcaption> Conexión entre el programador USB (Castle Link v3 USB programming kit) y el ESC </figcaption>
+</figure> 
+
 <figure>
   <img src="https://toopazo.github.io/images/castle_enable_live_link.png" style="width:90%" alt="alt_text" />
   <figcaption> Pasos 1, 2 y 3 para habilitar el "Castle Link Live" en los ESC de Castle Creations </figcaption>
 </figure> 
 
-Una vez habilitada la comunicación por protocolo [Castle Link Live](https://www.castlecreations.com/castle-link-live) debemos hacernos de otro adaptador, esta vez llamado [Castle Serial Link](https://www.castlecreations.com/en/serial-link-010-0121-00). Este si es un poco más interesante en el sentido que nos permite establecer un bus de datos al cual conectar los múltiples ESC que tengamos en un multirotor. La conexión hacia el computador se puede hacer con un USB Ftdi como se ve en la figura de más abajo. El voltaje en el BUS del Castle Serial Link debe ser de +5V en caso de que el ESC lo requiera, es es el caso de el Phoenix Edge HV.
+Una vez habilitada la comunicación por protocolo [Castle Link Live](https://www.castlecreations.com/castle-link-live) debemos hacernos de otro adaptador, esta vez llamado [Castle Serial Link](https://www.castlecreations.com/en/serial-link-010-0121-00). Este si es un poco más interesante en el sentido que nos permite establecer un bus de datos al cual conectar los múltiples ESC que tengamos en un multirotor. La conexión hacia el computador se puede hacer con un USB Ftdi como se ve en la figura de más abajo. El voltaje en el BUS del Castle Serial Link debe ser de +5V en caso de que el ESC lo requiera, que es justamente lo que sucede con el modelo Phoenix Edge HV.
 
 <figure>
   <img src="https://toopazo.github.io/images/castle_usbFtdi_serialLink.png" style="width:90%" alt="alt_text" />
