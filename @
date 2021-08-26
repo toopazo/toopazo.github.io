@@ -22,24 +22,15 @@ El presente escrito es un reporte acerca de mi experiencia programando un ESC pa
 
 ## 1) Telemetría usando el modelo [Phoenix Edge HV](https://www.castlecreations.com/en/phoenix-edge-hv)
 
-El ESC exacto en ser probado corresponde al modelo [Phoenix Edge HV 80 AMP ESC](https://www.castlecreations.com/en/commercial/phoenix-edge-hv80-esc-010-0105-00), el cual es programado usando el adaptador [Castle Link v3 USB programming kit](https://www.castlecreations.com/en/castle-link-v3-usb-programming-kit-011-0119-00), este corresponde a un simple y ordinario conversor serial FTDI, pero que venden por unos 20 USD, una triquiñuela para sacar algo de dinero extra. Pero bueno, eso es tema para otro día. 
-
+El ESC exacto en ser probado corresponde al modelo [Phoenix Edge HV 80 AMP ESC](https://www.castlecreations.com/en/commercial/phoenix-edge-hv80-esc-010-0105-00), el cual es programado usando el adaptador [Castle Link adapter](https://www.castlecreations.com/en/castle-link-v3-usb-programming-kit-011-0119-00), este corresponde a un simple y ordinario conversor serial FTDI, pero que venden por unos 20 USD, una triquiñuela para sacar algo de dinero extra. Pero bueno, eso es tema para otro día. 
 Una vez teniendo el ESC y el adaptador USB debemos descargar el programa [Castle Link Software](https://home.castlecreations.com/download-castle-link/). Esta disponible para Windows solamente, pero podemos instalar una maquina virtual si es que estamos en Linux.
 
 <figure>
-  <img src="https://toopazo.github.io/images/castle_enable_live_link.png" style="width:90%" alt="alt_text" />
-  <figcaption> Pasos 1, 2 y 3 para habilitar el "Castle Link Live" en los ESC de Castle Creations </figcaption>
+  <img src="https://toopazo.github.io/images/castle_enable_live_link.png" style="width:90" alt="alt_text" />
+  <figcaption> Pasos 1, 2 y 3 para habilitar el "Live Link" en los ESC de Castle Creations </figcaption>
 </figure> 
 
-Una vez habilitada la comunicación por protocolo [Castle Link Live](https://www.castlecreations.com/castle-link-live) debemos hacernos de otro adaptador, esta vez llamado [Castle Serial Link](https://www.castlecreations.com/en/serial-link-010-0121-00). Este si es un poco más interesante en el sentido que nos permite establecer un bus de datos al cual conectar los múltiples ESC que tengamos en un multirotor. La conexión hacia el computador se puede hacer con un USB Ftdi como se ve en la figura de más abajo. El voltaje en el BUS del Castle Serial Link debe ser de +5V en caso de que el ESC lo requiera, es es el caso de el Phoenix Edge HV.
-
-<figure>
-  <img src="https://toopazo.github.io/images/castle_usbFtdi_serialLink.png" style="width:90%" alt="alt_text" />
-  <figcaption> Conexión entre conversor USB Ftdi y Castle Serial Link </figcaption>
-</figure> 
-
-
-Luego de esta configuración inicial podemos empezar a desarrollar un programa para comunicarnos con los ESC y recopilar datos. Sin embargo en vez de reinventar la rueda ocuparemos un código en Python alojado en https://github.com/math2peters/CastleSerialLink
+In case we want to get live telemetry, then we need the [Castle Serial Link](https://www.castlecreations.com/en/serial-link-010-0121-00).
 
 ### Castle Serial Link library
 https://github.com/math2peters/CastleSerialLink
