@@ -46,8 +46,21 @@ Una vez habilitada la comunicación por protocolo [Castle Link Live](https://www
 
 Luego de esta configuración inicial podemos empezar a desarrollar un programa para comunicarnos con los ESC y recopilar datos. Sin embargo en vez de reinventar la rueda ocuparemos un código en Python alojado en https://github.com/math2peters/CastleSerialLink
 
-### Castle Serial Link library
-https://github.com/math2peters/CastleSerialLink
+```
+git clone https://github.com/math2peters/CastleSerialLink.git
+cd CastleSerialLink
+```
+
+Luego debemos simplemente usar el código de ejemplo y modificarlo para nuestros propósitos. En nuestro caso telemetría en tiempo real de las variables del rotor.
+
+
+Instalar libreria para i2c y probar dispositivos conectados
+```
+sudo apt-get install -y i2c-tools
+sudo i2cdetect -y 1
+```
+
+
 
 ## 2) Telemetría usando el protocolo UAVCAN
 

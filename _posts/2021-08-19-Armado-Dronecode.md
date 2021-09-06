@@ -133,6 +133,19 @@ Un segundo tipo de mecanismo más simple consta de un rosca o hilo que traba la 
 
 ## 4) Primer vuelo
 
-Aún por realizarse
+<figure>
+  <img src="https://toopazo.github.io/images/holybro_S500_v2_vuelo_2021-09-05_vista2.jpeg" style="width:30%" alt="alt_text" /> 
+  <img src="https://toopazo.github.io/images/holybro_S500_v2_vuelo_2021-09-05_vista3.jpeg" style="width:30%" alt="alt_text" /> 
+  <img src="https://toopazo.github.io/images/holybro_S500_v2_vuelo_2021-09-05_vista1.jpeg" style="width:30%" alt="alt_text" />
+  <figcaption> Kit S500 de Holybro, armado por Juan Cespedes, Agosto 2021 (parte 2) </figcaption>
+</figure>
+
+El vuelo se realizó en Pirque, Región Metropolitana, Chile el día 5 de Septiembre del 2021. Dos inconvenientes se identificar al momento del primer vuelo. 
+- Las batería usada al principio, al parecer, no tenían la suficiente capacidad de descargar. Es decir, no daban la corriente necesaria a los motores. Lo que generaba inestabilidad en el vehículo. Se debió reemplazar la batería por una del mismo voltaje (4S) pero mayor tasa de descarga. 
+- El computador de vuelo (Pixhawk) estaba adherido a la estructura por medio de una espuma aislante semi-rígida de aproximadamente 1cm de espesor. Sin embargo esta espuma no era la proveída por el fabricante, y genero problemas en la estimación de estados del vehículo (vibración excesiva). Se solucionó fijando con amarras plásticas el computador a la estructura, evitando vibraciones.
+
+Ambos problemas fueron de fácil solución. El resultado final puede verse en los siguientes vídeos. 
+
+El análisis de la bitácora del vehículo (logs) arroja ... (aún por analizar)
 
 
