@@ -19,7 +19,7 @@ El presente escrito es la versión practica de [Alternativas Dronecode](toopazo.
 
 |El siguiente es un artículo escrito con fines de divulgación y hecho con el mayor cuidado. Sin embargo no puedo garantizar que todo lo expuesto sea 100% correcto. Si encuentra algún error por favor háganmelo saber.|
 |--|
-|Historial de actualizaciones <ul><li>20-08-2021</li><li>21-08-2021</li><li>24-08-2021</li></ul>|
+|Historial de actualizaciones <ul><li>20-08-2021</li><li>21-08-2021</li><li>24-08-2021</li><li>05-09-2021</li></ul>|
 
 
 ## 1) Componentes principales de un multirotor
