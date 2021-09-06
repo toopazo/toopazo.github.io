@@ -137,7 +137,7 @@ Un segundo tipo de mecanismo más simple consta de un rosca o hilo que traba la 
   <img src="https://toopazo.github.io/images/holybro_S500_v2_vuelo_2021-09-05_vista2.jpeg" style="width:30%" alt="alt_text" /> 
   <img src="https://toopazo.github.io/images/holybro_S500_v2_vuelo_2021-09-05_vista3.jpeg" style="width:30%" alt="alt_text" /> 
   <img src="https://toopazo.github.io/images/holybro_S500_v2_vuelo_2021-09-05_vista1.jpeg" style="width:30%" alt="alt_text" />
-  <figcaption> Kit S500 de Holybro, armado por Juan Cespedes, Agosto 2021 (parte 2) </figcaption>
+  <figcaption> Kit S500 de Holybro en su primer vuelo, Septiembre 2021 </figcaption>
 </figure>
 
 El vuelo se realizó en Pirque, Región Metropolitana, Chile el día 5 de Septiembre del 2021. Dos inconvenientes se identificar al momento del primer vuelo. 
