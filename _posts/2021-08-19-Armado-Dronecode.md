@@ -22,18 +22,18 @@ El presente escrito es la versión practica de [Alternativas Dronecode](toopazo.
 |Historial de actualizaciones <ul><li>20-08-2021</li><li>21-08-2021</li><li>24-08-2021</li><li>05-09-2021</li></ul>|
 
 
-## 1) Componentes principales de un multirotor
+## 1) Modelos disponibles para armar
 
-Para los amantes del concepto open-source existen en la actualidad una seria de Kit de vehículos multirotor que pueden ser adquiridos y armados por alguien con relativamente poca experiencia. La idea de este escrito es reducir esa barrera aún más. Desde el punto de vista constructivo, es posible separar un multirotor en 3 componentes: un esqueleto, actuadores y un computador de vuelo. 
-
-El tamaño, peso, geometría y numero de brazos del esqueleto viene definido por el tipo de misión que queremos lograr con el vehículo. ¿Necesitamos portar un sensor de gases en una industria?, entonces lo más probable es que necesitemos una estructura de tamaño medio, robusta y de peso medio alto. ¿Queremos transmitir vídeo en vivo?, es probable entonces que una estructura pequeña y liviana nos baste. ¿Necesitamos cargar cajas de un lado a otro?, es probable que necesitemos más hélices de lo usual y una estructura más pesada. 
-
-Una simple búsqueda en la web por "frame kit multirotor drone" nos arroja una serie de alternativas para distintos propósitos: fotografía, carrera de Drones, filmación, carga, etc. 
+Para los amantes del concepto open-source existen en la actualidad una serie de kits de vehículos multirotor que pueden ser adquiridos y armados por alguien con relativamente poca experiencia. La idea de este escrito es reducir esa barrera aún más. Es más, una simple búsqueda en la web por "frame kit multirotor drone" nos arroja una serie de alternativas para distintos propósitos: fotografía, carrera de Drones, filmación, carga, etc. 
 
 <figure>
   <img src="https://toopazo.github.io/images/uav_frame_kit.png" style="width:90%" alt="alt_text" class="center"/> 
   <figcaption> Ejemplo de kits disponibles para armado de Drones, precio en USD </figcaption>
 </figure> 
+
+Desde el punto de vista constructivo, es posible separar un multirotor en 3 componentes: un esqueleto, actuadores y un computador de vuelo. A continuación revisamos de brevisima manera en que consite cada uno de ellos.
+
+El tamaño, peso, geometría y numero de brazos del esqueleto viene definido por el tipo de misión que queremos lograr con el vehículo. ¿Necesitamos portar un sensor de gases en una industria?, entonces lo más probable es que necesitemos una estructura de tamaño medio, robusta y de peso medio alto. ¿Queremos transmitir vídeo en vivo?, es probable entonces que una estructura pequeña y liviana nos baste. ¿Necesitamos cargar cajas de un lado a otro?, es probable que necesitemos más hélices de lo usual y una estructura más pesada. 
 
 Los actuadores son la suma de ESC + Motores + Hélices. Los controladores de motor son conocidos en inglés como [Electronic Speed Controllers (ESC)](https://en.wikipedia.org/wiki/Electronic_speed_control) y son los encargados de regular su velocidad de giro. Para multirotores casi siempre se utilizan [motores de corriente continua y sin escobilla (burshless DC motors)](https://en.wikipedia.org/wiki/Brushless_DC_electric_motor). Finalmente las hélices son las laminas diseñadas para rotar y desplazar el aire circundante de manera de generar empuje. 
 
@@ -46,7 +46,7 @@ Finalmente tenemos el computador de vuelo, el cual es el encargado de estimar la
 
 <figure>
   <img src="https://toopazo.github.io/images/pixhawk4_wiring_overview.png" style="width:80%" alt="alt_text" />
-  <figcaption> Ejemplo de computador de vuelo, fuente: <a href="https://docs.px4.io/master/en/assembly/quick_start_pixhawk4.html">docs.px4.io</a> </figcaption>
+  <figcaption> Ejemplo de computador de vuelo. Fuente: <a href="https://docs.px4.io/master/en/assembly/quick_start_pixhawk4.html">docs.px4.io</a> </figcaption>
 </figure> 
 
 ## 2) Armado mecánico y configuración inicial
@@ -140,12 +140,16 @@ Un segundo tipo de mecanismo más simple consta de un rosca o hilo que traba la 
   <figcaption> Kit S500 de Holybro en su primer vuelo, Septiembre 2021 </figcaption>
 </figure>
 
-El vuelo se realizó en Pirque, Región Metropolitana, Chile el día 5 de Septiembre del 2021. Dos inconvenientes se identificar al momento del primer vuelo. 
-- Las batería usada al principio, al parecer, no tenían la suficiente capacidad de descargar. Es decir, no daban la corriente necesaria a los motores. Lo que generaba inestabilidad en el vehículo. Se debió reemplazar la batería por una del mismo voltaje (4S) pero mayor tasa de descarga. 
+El vuelo se realizó en Pirque, Región Metropolitana, Chile, el día 5 de Septiembre del 2021. Dos inconvenientes se identificaron al momento del primer despegue. 
+- Las batería usada al principio, al parecer, no tenían la suficiente capacidad de descargar. Es decir, no daban la corriente necesaria a los motores. Lo que generaba inestabilidad en el vehículo. Se debió reemplazar la batería por una del mismo voltaje (4S) pero mayor potencia. 
 - El computador de vuelo (Pixhawk) estaba adherido a la estructura por medio de una espuma aislante semi-rígida de aproximadamente 1cm de espesor. Sin embargo esta espuma no era la proveída por el fabricante, y genero problemas en la estimación de estados del vehículo (vibración excesiva). Se solucionó fijando con amarras plásticas el computador a la estructura, evitando vibraciones.
 
-Ambos problemas fueron de fácil solución. El resultado final puede verse en los siguientes vídeos. 
+Ambos problemas fueron de fácil solución. El resultado final fue un vuelo estable y ágil que puede verse en los siguientes vídeos. 
 
-El análisis de la bitácora del vehículo (logs) arroja ... (aún por analizar)
+(aun por subir)
+
+El análisis de la bitácora del vehículo (logs) arroja 
+
+(aún por analizar)
 
 
