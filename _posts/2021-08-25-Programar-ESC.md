@@ -7,7 +7,7 @@ layout: archive
 collection: postscyt
 ---
 
-El presente escrito es un reporte acerca de mi experiencia programando un ESC para obtener datos en linea. Un ESC es un controlador para motores sin escobilla que aumenta o disminuye la potencia inyectada a éste para así regular su velocidad de giro. Obtener datos instantáneos como voltaje, corriente y velocidad del motor son de vital importancia para estimar el consumo de cada rotor y pueden ser usado incluso como parte del controlador de vuelo. Todo el software usado en este reporte se encuetra disponible en https://github.com/toopazo/live_esc
+El presente escrito es un reporte acerca de mi experiencia programando un ESC para obtener datos en linea. Un ESC es un controlador para motores sin escobilla que aumenta o disminuye la potencia inyectada a éste para así regular su velocidad de giro. Obtener datos instantáneos como voltaje, corriente y velocidad del motor son de vital importancia para estimar el consumo de cada rotor y pueden ser usado incluso como parte del controlador de vuelo. Todo el software usado en este reporte se encuentra disponible en https://github.com/toopazo/live_esc
 
 <figure>
   <img src="https://toopazo.github.io/images/uavcan_esc.png" style="width:45%" alt="alt_text" /> 
@@ -95,7 +95,7 @@ El motor fue hecho trabajar sin carga, por ende tanto la corriente como los efec
 
 El modo ```TTL Serial``` de Castle Creations funcionó correctamente, tanto en leer variables como en comandar ```throttle``` al motor. Para volar un Drone en este modo se requeriría conectar ***de manera digital (es decir por software)*** la salida ```IO PWM out``` del Pixhawk con la escritura del registro de ```throttle``` recién mencionada.
 
-Si quiseramos ocupar directamente la señal ```IO PWM out``` hay por ahora malas noticias. Pues nunca pude hacer funcionar el modo ```TTL Serial (with PPM Input)``` de los ESC de Castle Creations. Esto ya que  no reconocian la señal análoga desde el Pixahwk. En especifico, la señal desde el puerto ```IO PWM out``` para el motor 1 (podria haber sido cualquier otro motor 2, 3 .. 8) era conectada al pin ```D``` del dispositivo Serial Link. Pero a pesar de hacer esto, el ESC no reconocia la señal y por tanto el motor no giraba.
+Si quiseramos ocupar directamente la señal ```IO PWM out``` hay por ahora malas noticias. Pues en estas pruebas nunca se pudo hacer funcionar el modo ```TTL Serial (with PPM Input)``` de los ESC de Castle Creations. Esto ya que el adaptador Serial Link no reconocia la señal análoga desde el Pixahwk. En especifico, la señal desde el puerto ```IO PWM out``` del Pixhawk hacia el motor 1 (podria haber sido cualquier otro motor 2, 3 .. 8) fue conectada al pin ```D``` del dispositivo Serial Link, pero el motor no respondió. Todo parece indicar que el problema es con Serial Link y no con el ESC o el motor. 
 
 ## 2) Telemetría usando el modelo [KDE-UAS85UVC](https://www.kdedirect.com/collections/uas-multi-rotor-electronics/products/kde-uas85uvc) 
  
@@ -109,34 +109,49 @@ La lista de materiales para esta prueba fue:
 - Baterías de 4S2P  (dos baterías 4S en serie => 29.6 V)
 - Un regulador de voltaje de 5V para energizar la linea de alimentación del Pixahwk
 
-Los ESC de la empresa KDE usan el protocolo CAN para transmitir datos con una serie de comandos llamados [KDECAN](https://cdn.shopify.com/s/files/1/0496/8205/files/KDECAN_Bus_Protocol_1.0.0.pdf?11895809671989535815). Para transmitir telemetría usó un adaptador [Inno-Maker: USB CAN Module](https://www.inno-maker.com/product/usb-can/).  La comunicación se puede establecer mediante Python y la librería python-can
+Los ESC de la empresa KDE usan el protocolo CAN para transmitir datos con una serie de comandos llamados [KDECAN](https://cdn.shopify.com/s/files/1/0496/8205/files/KDECAN_Bus_Protocol_1.0.0.pdf?11895809671989535815). Para transmitir telemetría se usó un adaptador [Inno-Maker: USB CAN Module](https://www.inno-maker.com/product/usb-can/). La comunicación se puede establecer mediante Python y la librería python-can
 
-Para entender como funciona el protocolo CAN están dos referencias fueron útiles para mi
+Para entender como funciona el protocolo CAN están dos referencias son bastante útiles
 - https://copperhilltech.com/blog/controller-area-network-can-bus-bus-arbitration/
 - https://www.ni.com/en-my/innovations/white-papers/06/controller-area-network--can--overview.html
 
-La libreria ```python-can``` esta disponible a través de ```pip```. El codigo y la documentación se puede visitar en 
-- https://python-can.readthedocs.io/en/stable/
-- https://github.com/hardbyte/python-can
+El protocolo de comandos de KDECAN está disponible en https://www.kdedirect.com/pages/resource-center bajo la sección "Electronics". Pero tambien se puede encontrar en [este link](https://github.com/toopazo/live_esc/blob/main/kde_uas85uvc/KDECAN_Bus_Protocol_1.0.3.pdf). El código fué implementado en Python 3 y se encuentra disponible en la carpeta de KDE que forma parte del ya mencionado repositorio [live_esc](https://github.com/toopazo/live_esc). 
 
-El protocolo de comandos está disponible en https://www.kdedirect.com/pages/resource-center bajo la sección "Electronics". Pero tambien se puede encontrar en [este link](https://github.com/toopazo/live_esc/blob/main/kde_uas85uvc/KDECAN_Bus_Protocol_1.0.3.pdf). El código fué implementado en Python 3 y se encuentra disponible en la carpeta de KDE que forma parte del ya mencionado repositorio [live_esc](https://github.com/toopazo/live_esc). 
+### Como instalar el código
+Las instrucciones para instalar el código son:
+```shell
+git clone https://github.com/toopazo/live_esc.git
+cd live_esc/
+. ./create_venv.sh
+```
+Es necesario asegurarse de que al final el script tengamos el entorno activo, esto es visible en el identificador del terminal
+```(venv) user@host:```
+
+En caso contrario simplemente hay que ejecutar
+```shell
+source venv/bin/activate
+```
+Para desactivar el entorno se debe ejecutar
+```shell
+deactivate
+```
+
+### Como ejecutar el código
+La instrucciones para ejecutar el código son:
+```shell
+cd kde_uas85uvc
+python kdecan_main.py
+python kdecan_plot_log.py
+```
+
+El primer script de python ejecutado se comunica con el ESC y guarda los datos a un log. El segundo script se encarga de generar la imagen de más abajo.
 
 <figure>
   <img src="https://toopazo.github.io/images/kdecan_telemtry_pandas.png" style="width:100%" alt="alt_text" />
   <figcaption> Telemetría en vivo obtenida a través de KDECAN </figcaption>
 </figure> 
 
-### Como ejecutar el código
-La instrucciones para ejecutar el código son:
-```
-git clone https://github.com/toopazo/live_esc.git
-cd live_esc
-cd kde_uas85uvc
-python3 kdecan_main.py
-```
-El primer script de python ejecutado se comunica con el ESC y guarda los datos a un log. El segundo script se encarga de generar la imagen de más abajo.
-
-
+El software de los ESC de KDE no permiten, por ahora, comandar un determinado ```throttle``` al motor. Sin embargo podemos ocupar la salida analoga ```IO PWM out``` directamente desde el Pixhawk y así volar el vehículo. Esta es la situación opuesta al modelo de Caste Creations. 
 
 ## 3) Telemetría usando el protocolo UAVCAN
 
