@@ -7,7 +7,7 @@ layout: archive
 collection: postscyt
 ---
 
-El presente escrito es un reporte acerca de mi experiencia programando un ESC para obtener datos en linea. Un ESC es un controlador para motores sin escobilla que aumenta o disminuye la potencia inyectada a éste para así regular su velocidad de giro. Obtener datos instantáneos como voltaje, corriente y velocidad del motor son de vital importancia para estimar el consumo de cada rotor y pueden ser usado incluso como parte del controlador de vuelo. Todo el software usado en este reporte se encuentra disponible en https://github.com/toopazo/live_esc
+El presente escrito es un reporte acerca de mi experiencia programando un ESC para obtener datos en linea. Un ESC es un controlador para motores sin escobilla que aumenta o disminuye la potencia inyectada a éste para así regular su velocidad de giro. Obtener datos instantáneos como voltaje, corriente y velocidad del motor son de vital importancia para estimar el consumo de cada rotor y pueden ser usados incluso como parte del controlador de vuelo. El software descrito en este reporte se encuentra disponible en el repositorio https://github.com/toopazo/live_esc
 
 <figure>
   <img src="https://toopazo.github.io/images/uavcan_esc.png" style="width:45%" alt="alt_text" /> 
@@ -18,9 +18,28 @@ El presente escrito es un reporte acerca de mi experiencia programando un ESC pa
 
 |El siguiente es un artículo escrito con fines de divulgación y hecho con el mayor cuidado. Sin embargo no puedo garantizar que todo lo expuesto sea 100% correcto. Si encuentra algún error por favor háganmelo saber.|
 |--|
-|Historial de actualizaciones <ul><li>25-08-2021</li><li>26-08-2021</li><li>27-08-2021</li></ul>|
+|Historial de actualizaciones <ul><li>25-08-2021</li><li>26-08-2021</li><li>27-08-2021</li><li>18-09-2021</li></ul>|
 
-## 1) Telemetría usando el modelo [Phoenix Edge HV](https://www.castlecreations.com/en/phoenix-edge-hv)
+## 1) Como instalar el código
+Las instrucciones para instalar el código son:
+```shell
+git clone https://github.com/toopazo/live_esc.git
+cd live_esc/
+. ./create_venv.sh
+```
+Es necesario asegurarse de que al final el script tengamos el entorno activo, esto es visible en el identificador del terminal
+```(venv) user@host:```
+
+En caso contrario simplemente hay que ejecutar
+```shell
+source venv/bin/activate
+```
+Para desactivar el entorno se debe ejecutar
+```shell
+deactivate
+```
+
+## 2) Telemetría usando el modelo [Phoenix Edge HV](https://www.castlecreations.com/en/phoenix-edge-hv)
 
 La lista de materiales para esta prueba fue:
 - [Castle Creation: Phoenix Edge HV 80](https://www.castlecreations.com/en/phoenix-edge-hv/phoenix-edge-hv80-esc-010-0105-00)
@@ -56,26 +75,6 @@ Una vez habilitada la comunicación por protocolo [Castle Link Live](https://www
 
 Luego de esta configuración inicial podemos empezar a desarrollar un programa para comunicarnos con los ESC y obtener datos en linea. Sin embargo en vez de reinventar la rueda ocuparemos un código en Python disponible en el Github  https://github.com/math2peters/CastleSerialLink. Lo que haremos es simplemente usar el código de ```mathpeters``` y modificarlo para nuestros propósitos de telemetría. El código se encuentra dentro de la carpeta ```https://github.com/toopazo/live_esc/tree/main/phoenix_edge_hv_80``` del ya mencionado repositorio [live_esc](https://github.com/toopazo/live_esc). 
 
-### Como instalar el código
-Las instrucciones para instalar el código son:
-```shell
-git clone https://github.com/toopazo/live_esc.git
-cd live_esc/
-. ./create_venv.sh
-```
-Es necesario asegurarse de que al final el script tengamos el entorno activo, esto es visible en el identificador del terminal
-```(venv) user@host:```
-
-En caso contrario simplemente hay que ejecutar
-```shell
-source venv/bin/activate
-```
-Para desactivar el entorno se debe ejecutar
-```shell
-deactivate
-```
-
-### Como ejecutar el código
 La instrucciones para ejecutar el código son:
 ```shell
 cd phoenix_edge_hv_80/CastleSerialLink
@@ -89,7 +88,6 @@ El primer script de python crea un archivo con los datos obtenidos desde el ESC,
   <img src="https://toopazo.github.io/images/phoenix_edge_hv_telemtry_pandas.png" style="width:100%" alt="alt_text" />
   <figcaption> Telemetría en vivo obtenida a través del Serial Link </figcaption>
 </figure> 
-
 
 El motor fue hecho trabajar sin carga, por ende tanto la corriente como los efectos de ripple se esperaban como menores. Sin embargo al parecer el ESC no tiene una buena precisión para estas variables. Este fenómeno también ha sido observado con otras marcas de ESC. Al parecer ninguna de ellas entrega valores fidedignos de corriente consumida. Voltaje, rpm y otras variables parecen ser precisas. 
 
@@ -117,26 +115,6 @@ Para entender como funciona el protocolo CAN están dos referencias son bastante
 
 El protocolo de comandos de KDECAN está disponible en https://www.kdedirect.com/pages/resource-center bajo la sección "Electronics". Pero tambien se puede encontrar en [este link](https://github.com/toopazo/live_esc/blob/main/kde_uas85uvc/KDECAN_Bus_Protocol_1.0.3.pdf). El código fué implementado en Python 3 y se encuentra disponible en la carpeta de KDE que forma parte del ya mencionado repositorio [live_esc](https://github.com/toopazo/live_esc). 
 
-### Como instalar el código
-Las instrucciones para instalar el código son:
-```shell
-git clone https://github.com/toopazo/live_esc.git
-cd live_esc/
-. ./create_venv.sh
-```
-Es necesario asegurarse de que al final el script tengamos el entorno activo, esto es visible en el identificador del terminal
-```(venv) user@host:```
-
-En caso contrario simplemente hay que ejecutar
-```shell
-source venv/bin/activate
-```
-Para desactivar el entorno se debe ejecutar
-```shell
-deactivate
-```
-
-### Como ejecutar el código
 La instrucciones para ejecutar el código son:
 ```shell
 cd kde_uas85uvc
