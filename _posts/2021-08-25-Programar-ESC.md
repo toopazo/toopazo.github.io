@@ -95,7 +95,7 @@ El modo ```TTL Serial``` de Castle Creations funcionó correctamente, tanto en l
 
 Si quiseramos ocupar directamente la señal ```IO PWM out``` hay por ahora malas noticias. Pues en estas pruebas nunca se pudo hacer funcionar el modo ```TTL Serial (with PPM Input)``` de los ESC de Castle Creations. Esto ya que el adaptador Serial Link no reconocia la señal análoga desde el Pixahwk. En especifico, la señal desde el puerto ```IO PWM out``` del Pixhawk hacia el motor 1 (podria haber sido cualquier otro motor 2, 3 .. 8) fue conectada al pin ```D``` del dispositivo Serial Link, pero el motor no respondió. Todo parece indicar que el problema es con Serial Link y no con el ESC o el motor. 
 
-## 2) Telemetría usando el modelo [KDE-UAS85UVC](https://www.kdedirect.com/collections/uas-multi-rotor-electronics/products/kde-uas85uvc) 
+## 3) Telemetría usando el modelo [KDE-UAS85UVC](https://www.kdedirect.com/collections/uas-multi-rotor-electronics/products/kde-uas85uvc) 
  
 La lista de materiales para esta prueba fue:
 - [KDE Direct: KDE-UAS85UVC](https://www.kdedirect.com/collections/uas-multi-rotor-electronics/products/kde-uas85uvc)
@@ -131,7 +131,7 @@ El primer script de python ejecutado se comunica con el ESC y guarda los datos a
 
 El software de los ESC de KDE no permiten, por ahora, comandar un determinado ```throttle``` al motor. Sin embargo podemos ocupar la salida analoga ```IO PWM out``` directamente desde el Pixhawk y así volar el vehículo. Esta es la situación opuesta al modelo de Caste Creations. 
 
-## 3) Telemetría usando el protocolo UAVCAN
+## 4) Telemetría usando el protocolo UAVCAN
 
 El protocolo UAVCAN es el el estandar promovido por Droncode Foundation, su pagina web y documentación es https://uavcan.org/. Lamentablemente los ESC que incorporan esta tecnología son de muy bajo amperaje y no son compatibles con el motor que yo tenía dispoible para esta seria de pruebas. Queda entonces para más adelante. 
 
