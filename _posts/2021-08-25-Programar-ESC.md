@@ -54,16 +54,30 @@ Una vez habilitada la comunicación por protocolo [Castle Link Live](https://www
   <figcaption> Conexión entre conversor USB Ftdi y Castle Serial Link </figcaption>
 </figure> 
 
-Luego de esta configuración inicial podemos empezar a desarrollar un programa para comunicarnos con los ESC y recopilar datos. Sin embargo en vez de reinventar la rueda ocuparemos un código en Python disponible en el Github  https://github.com/math2peters/CastleSerialLink. Lpo que hice fue simplemente usar el código de ejemplo y modificarlo para nuestros propósitos de telemetría. El código se encuentra dentro de la carpeta ```https://github.com/toopazo/live_esc/tree/main/phoenix_edge_hv_80``` del ya mencionado repositorio [live_esc](https://github.com/toopazo/live_esc). El archivo ```read_esc_data.py``` se conecta con el ESC (a través del conversor serial FTDI y el Serial Link) y guarda los datos en un archivo .pkl. Este archivo es luego leido por ```plot_esc_data.py``` el cual produce una imagen como la observada más abajo.
+Luego de esta configuración inicial podemos empezar a desarrollar un programa para comunicarnos con los ESC y obtener datos en linea. Sin embargo en vez de reinventar la rueda ocuparemos un código en Python disponible en el Github  https://github.com/math2peters/CastleSerialLink. Lo que haremos es simplemente usar el código de ```mathpeters``` y modificarlo para nuestros propósitos de telemetría. El código se encuentra dentro de la carpeta ```https://github.com/toopazo/live_esc/tree/main/phoenix_edge_hv_80``` del ya mencionado repositorio [live_esc](https://github.com/toopazo/live_esc). 
 
-<figure>
-  <img src="https://toopazo.github.io/images/phoenix_edge_hv_telemtry_pandas.png" style="width:100%" alt="alt_text" />
-  <figcaption> Telemtria en vivo obtenida a través del Serial Link </figcaption>
-</figure> 
-
-
-La instrucciones para ejecutar el código son:
+### Instalar el código
+Las instrucciones para instalar el código son:
+```shell
+git clone https://github.com/toopazo/live_esc.git
+cd live_esc/
+. ./create_venv.sh
 ```
+Es necesario asegurarse de que al final el script tengamos el entorno activo, esto es visible en el identificador del terminal
+```(venv) user@host:```
+
+En caso contrario simplemente hay que ejecutar
+```shell
+source venv/bin/activate
+```
+Para desactivar el entorno se debe ejecutar
+```shell
+deactivate
+```
+
+### Ejecutar el código
+La instrucciones para ejecutar el código son:
+```shell
 git clone https://github.com/toopazo/live_esc.git
 cd live_esc
 cd phoenix_edge_hv_80/CastleSerialLink
@@ -71,9 +85,19 @@ python3 read_esc_data.py
 python3 plot_esc_data.py
 ```
 
+Este archivo es luego leido por ```plot_esc_data.py``` el cual produce una imagen como la observada más abajo.
+
+<figure>
+  <img src="https://toopazo.github.io/images/phoenix_edge_hv_telemtry_pandas.png" style="width:100%" alt="alt_text" />
+  <figcaption> Telemetría en vivo obtenida a través del Serial Link </figcaption>
+</figure> 
+
+
 El motor fue hecho trabajar sin carga, por ende tanto la corriente como los efectos de ripple se esperaban como menores. Sin embargo al parecer el ESC no tiene una buena precisión para estas variables. Este fenómeno también ha sido observado con otras marcas de ESC. Al parecer ninguna de ellas entrega valores fidedignos de corriente consumida. Voltaje, rpm y otras variables parecen ser precisas. 
 
-Lamentablemente nunca pude hacer funcionar la telemetría de manera conjunta con el Pixhawk. Es decir, comandar ```throttle``` desde el computador de vuelo y a la vez obtener telemetría de las variables de estado desde mi Laptop. Al tratar de hacer funcionar el modo ```TTL Serial (with PPM Input)``` de los ESC de Castle Creations no reconocian la señal de ```throttle``` desde el Pixahwk. En especifico, la señal desde el puerto ```IO PWM out``` para el motor 1 (podria haber sido cualquier otro motor 2, 3 .. 8) era conectada al pin ```D``` del dispositivo Serial Link. Al hacer esto, el ESC no reconocia la señal y por tanto el motor no giraba.
+El modo ```TTL Serial``` de Castle Creations funcionó correctamente, tanto en leer variables como en comandar ```throttle``` al motor. Para volar un Drone en este modo se requeriría conectar ***de manera digital (es decir por software)*** la salida ```IO PWM out``` del Pixhawk con la escritura del registro de ```throttle``` recién mencionada.
+
+Si quiseramos ocupar directamente la señal ```IO PWM out``` tengo por ahora malas noticias. Pues nunca pude hacer funcionar el modo ```TTL Serial (with PPM Input)``` de los ESC de Castle Creations. Esto ya que  no reconocian la señal análoga desde el Pixahwk. En especifico, la señal desde el puerto ```IO PWM out``` para el motor 1 (podria haber sido cualquier otro motor 2, 3 .. 8) era conectada al pin ```D``` del dispositivo Serial Link. Pero a pesar de hacer esto, el ESC no reconocia la señal y por tanto el motor no giraba.
 
 ## 2) Telemetría usando el modelo [KDE-UAS85UVC](https://www.kdedirect.com/collections/uas-multi-rotor-electronics/products/kde-uas85uvc) 
  
@@ -97,7 +121,12 @@ La libreria ```python-can``` esta disponible a través de ```pip```. El codigo y
 - https://python-can.readthedocs.io/en/stable/
 - https://github.com/hardbyte/python-can
 
-El protocolo de comandos está disponible en https://www.kdedirect.com/pages/resource-center bajo la sección "Electronics". Este fué implementado en Python 3 y se encuentra disponible en la carpeta ```https://github.com/toopazo/live_esc/tree/main/kde_uas85uvc``` del ya mencionado repositorio [live_esc](https://github.com/toopazo/live_esc). 
+El protocolo de comandos está disponible en https://www.kdedirect.com/pages/resource-center bajo la sección "Electronics". Este fué implementado en Python 3 y se encuentra disponible en la carpeta ```https://github.com/toopazo/live_esc/tree/main/kde_uas85uvc``` del ya mencionado repositorio [live_esc](https://github.com/toopazo/live_esc). El archivo ```kdecan_main.py``` se comunica con el ESC y guarda los datos, los cuales son posteriormente usados para generar la imagen de más abajo.
+
+<figure>
+  <img src="https://toopazo.github.io/images/kdecan_telemtry_pandas.png" style="width:100%" alt="alt_text" />
+  <figcaption> Telemetría en vivo obtenida a través de KDECAN </figcaption>
+</figure> 
 
 La instrucciones para ejecutar el código son:
 ```
