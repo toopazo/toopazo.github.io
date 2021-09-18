@@ -73,7 +73,7 @@ Una vez habilitada la comunicación por protocolo [Castle Link Live](https://www
   <figcaption> Conexión entre conversor USB Ftdi y Castle Serial Link </figcaption>
 </figure> 
 
-Luego de esta configuración inicial podemos empezar a desarrollar un programa para comunicarnos con los ESC y obtener datos en linea. Sin embargo en vez de reinventar la rueda ocuparemos un código en Python disponible en el Github  https://github.com/math2peters/CastleSerialLink. Lo que haremos es simplemente usar el código de ```mathpeters``` y modificarlo para nuestros propósitos de telemetría. El código se encuentra dentro de la carpeta ```https://github.com/toopazo/live_esc/tree/main/phoenix_edge_hv_80``` del ya mencionado repositorio [live_esc](https://github.com/toopazo/live_esc). 
+Luego de esta configuración inicial podemos empezar a desarrollar un programa para comunicarnos con los ESC y obtener datos en linea. Sin embargo en vez de reinventar la rueda ocuparemos un código en Python disponible en el Github  https://github.com/math2peters/CastleSerialLink. Lo que haremos es simplemente usar el código de ```mathpeters``` y modificarlo para nuestros propósitos de telemetría. El código se encuentra dentro de la carpeta dedicada a los modelos Phoenix Edge dentro del ya mencionado repositorio [live_esc](https://github.com/toopazo/live_esc). 
 
 La instrucciones para ejecutar el código son:
 ```shell
