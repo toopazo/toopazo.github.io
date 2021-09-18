@@ -107,7 +107,7 @@ La lista de materiales para esta prueba fue:
 - Baterías de 4S2P  (dos baterías 4S en serie => 29.6 V)
 - Un regulador de voltaje de 5V para energizar la linea de alimentación del Pixahwk
 
-Los ESC de la empresa KDE usan el protocolo CAN para transmitir datos con una serie de comandos llamados [KDECAN](https://cdn.shopify.com/s/files/1/0496/8205/files/KDECAN_Bus_Protocol_1.0.0.pdf?11895809671989535815). Para transmitir telemetría se usó un adaptador [Inno-Maker: USB CAN Module](https://www.inno-maker.com/product/usb-can/). La comunicación se puede establecer mediante Python y la librería ```python-can```. Para entender como funciona el protocolo CAN están dos referencias son bastante útiles
+Los ESC de la empresa KDE usan el protocolo CAN para transmitir datos con una serie de comandos llamados [KDECAN](https://cdn.shopify.com/s/files/1/0496/8205/files/KDECAN_Bus_Protocol_1.0.0.pdf?11895809671989535815). Para transmitir telemetría se usó un adaptador [Inno-Maker: USB CAN Module](https://www.inno-maker.com/product/usb-can/). La comunicación se puede establecer mediante Python y la librería ```python-can```. Para entender como funciona el protocolo CAN estás dos referencias son bastante útiles
 - https://copperhilltech.com/blog/controller-area-network-can-bus-bus-arbitration/
 - https://www.ni.com/en-my/innovations/white-papers/06/controller-area-network--can--overview.html
 
