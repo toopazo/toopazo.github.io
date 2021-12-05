@@ -144,12 +144,7 @@ El vuelo se realizó en Pirque, Región Metropolitana, Chile, el día 5 de Septi
 - Las batería usada al principio, al parecer, no tenían la suficiente capacidad de descargar. Es decir, no daban la corriente necesaria a los motores. Lo que generaba inestabilidad en el vehículo. Se debió reemplazar la batería por una del mismo voltaje (4S) pero mayor potencia. 
 - El computador de vuelo (Pixhawk) estaba adherido a la estructura por medio de una espuma aislante semi-rígida de aproximadamente 1cm de espesor. Sin embargo esta espuma no era la proveída por el fabricante, y generó problemas en la estimación de estados del vehículo (vibración excesiva). Se solucionó fijando con amarras plásticas el computador a la estructura, evitando vibraciones.
 
-Ambos problemas fueron de fácil solución. El resultado final fue un vuelo estable y ágil que puede verse en los siguientes vídeos. 
+Ambos problemas fueron de fácil solución. El resultado final fue un vuelo estable y ágil que puede verse en el siguiente vídeos. 
 
-(aun por subir)
-
-El análisis de la bitácora del vehículo (logs) arroja 
-
-(aún por analizar)
-
+https://youtu.be/bWr7Q0OXhF4
 
