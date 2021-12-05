@@ -1,6 +1,6 @@
 ---
 title: Armado de un vehículo aéreo no tripulado open-source
-date: 2021-08-19
+date: 2021-06-02
 categories: 
 - postscyt
 layout: archive

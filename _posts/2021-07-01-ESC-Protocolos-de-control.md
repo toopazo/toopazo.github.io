@@ -1,13 +1,13 @@
 ---
-title: Protocolos de comunicación con un ESC
-date: 2021-10-21
+title: Protocolos de control ESC
+date: 2021-07-01
 categories: 
 - postscyt
 layout: archive
 collection: postscyt
 ---
 
-El presente escrito es un reporte acerca de mi experiencia con los diferentes protocolos de comunicación entre un ESC y un computador de vuelo. Todo esto en el contexto de vehículos autónomos no tripulados.
+El presente escrito es un reporte acerca de los diferentes protocolos de control usados entre un ESC y un computador de vuelo. Todo esto en el contexto de vehículos autónomos no tripulados. Todos estos protocolos cumplen la misma función, indican cuan rapido o lento deben girar los motores. Pero una serie de caracteristicas tecnicas hacen que unos protocolos sean mejores que otros para ciertos vehículos. 
 
 <figure>
   <img src="https://toopazo.github.io/images/uavcan_esc.png" style="width:45%" alt="alt_text" /> 
@@ -20,9 +20,15 @@ El presente escrito es un reporte acerca de mi experiencia con los diferentes pr
 |--|
 |Historial de actualizaciones <ul><li>21-10-2021</li></ul>|
 
-## 1) Tipos de protocolo
+## 1) Señal analógica PWM
 
-## 2) Señal analógica
+El modo clásico para controlar la velocidad de giro de un motor DC es usando una señal analógica llamada ```throttle``` en ingles. Esta, por lo general varia de 0V a 5V con una frequencia de 20ms y es enviada al ESC el cual se encarga de hacer girar el motor DC. La misma señal es usada en servo-motores pero es interpretada de distinta manera, en este caso no se necesita de un ESC si no que la señal es enviada directamente al dispositivo. La siguiente imagen del sitio web [howtomechatronics.com](https://howtomechatronics.com/wp-content/uploads/2019/02/Brushless-motor-control-signal-50hz-PWM-same-as-servo-motor.png) ilustra la forma de onda de la señal de control. 
+
+<figure>
+  <img src="https://toopazo.github.io/images/esc_pwm_howtomechatronics.png" style="width:90%" alt="alt_text" />
+  <figcaption> Forma de onda de la señal de control PWM con la que un ESC controla la velocidad de un motor </figcaption>
+</figure>
+
 
 
 Uno de los aspectos complicados de este tipo de señal es que son susceptibles al ruido y a variaciones de voltaje debido a tipo y largo de cables usados. Para subsanar esto muchas veces es necesario hacer una calibración del ESC. Esto permite que este dispositivo conozca que valor de la señal debe estar asociado a tres puntos criticos
@@ -31,7 +37,6 @@ Uno de los aspectos complicados de este tipo de señal es que son susceptibles a
 - motor a mínima velocidad
 - motor a máxima velocidad
 
-En el caso de el modelo KDE-UAS85UVC podemos usar el software [Device Manager](https://www.kdedirect.com/products/kde-dms)
 
 ## 3) Dshot y sus variantes
 

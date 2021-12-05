@@ -1,6 +1,6 @@
 ---
-title: Alternativas open-source para vehículos aéreos no tripulados
-date: 2021-07-10 00:00:00 -07:00
+title: Alternativas para un vehículo aéreo no tripulado open-source
+date: 2021-06-01
 categories:
 - postscyt
 layout: archive
