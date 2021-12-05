@@ -20,22 +20,37 @@ El presente escrito es un reporte acerca de los diferentes protocolos de control
 |--|
 |Historial de actualizaciones <ul><li>21-10-2021</li></ul>|
 
+
+
 ## 1) Señal analógica PWM
 
-El modo clásico para controlar la velocidad de giro de un motor DC es usando una señal analógica llamada ```throttle``` en ingles. Esta, por lo general varia de 0V a 5V con una frequencia de 20ms y es enviada al ESC el cual se encarga de hacer girar el motor DC. La misma señal es usada en servo-motores pero es interpretada de distinta manera, en este caso no se necesita de un ESC si no que la señal es enviada directamente al dispositivo. La siguiente imagen del sitio web [howtomechatronics.com](https://howtomechatronics.com/wp-content/uploads/2019/02/Brushless-motor-control-signal-50hz-PWM-same-as-servo-motor.png) ilustra la forma de onda de la señal de control. 
+
+El modo clásico para controlar la velocidad de giro de un motor DC es usando una señal PWM analógica. Esta, por lo general varia de 0V a 5V con una frequencia de 20ms (50 Hz) y es enviada al ESC el cual se encarga de hacer girar el motor DC. La misma señal es usada en servo-motores pero es interpretada de distinta manera, en este caso no se necesita de un ESC si no que la señal es enviada directamente al dispositivo. Esta forma de onda fue durante años la manera estándar de control disponible. El ancho de cada pulso indica al ESC si el motor debía estar: 
+- detenido, pero en espera (900 us)
+- girando a mínima velocidad (1000 us) 
+- girando a máxima velocidad (2000 us)
+
+La siguiente imagen del sitio web [howtomechatronics.com](https://howtomechatronics.com/wp-content/uploads/2019/02/Brushless-motor-control-signal-50hz-PWM-same-as-servo-motor.png) ilustra la forma de onda. 
 
 <figure>
   <img src="https://toopazo.github.io/images/esc_pwm_howtomechatronics.png" style="width:90%" alt="alt_text" />
   <figcaption> Forma de onda de la señal de control PWM con la que un ESC controla la velocidad de un motor </figcaption>
 </figure>
 
+Debido a la aparición de vehículos cada vez más pequeños y ágiles, con el tiempo fue necesario incrementar la frecuencia con la que el ESC realizaba cambios de velocidad en el motor. Fue así como surgieron señales PWM de 100 Hz, 200 Hz hasta llegar a los 400 Hz que es común encontrar hoy en día (2021) en muchos ESC comerciales. 
 
+<figure>
+  <img src="https://toopazo.github.io/images/esc_pwm_50Hz_400Hz.jpg" style="width:90%" alt="alt_text" />
+  <figcaption> Forma de onda de la señal de control PWM a 50Hz y a 400 Hz </figcaption>
+</figure>
 
-Uno de los aspectos complicados de este tipo de señal es que son susceptibles al ruido y a variaciones de voltaje debido a tipo y largo de cables usados. Para subsanar esto muchas veces es necesario hacer una calibración del ESC. Esto permite que este dispositivo conozca que valor de la señal debe estar asociado a tres puntos criticos
+|Esta frecuencia NO debe confundirse con la frecuencia eléctrica a la que operan los motores (del orden de 10 kHz), si no que es la frecuencia con la que se actualiza la velocidad del motor.|
+|--|
 
-- motor en espera
-- motor a mínima velocidad
-- motor a máxima velocidad
+Uno de los aspectos complicados de este tipo de señal es que son susceptibles al ruido y a variaciones temporales del pulso debido a tipo y largo de cables usados. Para subsanar esto muchas veces se hacía (ya hace) necesario hacer una calibración individual para cada ESC. 
+
+Pero además de problemas de calibración, este tipo de señal 
+
 
 
 ## 3) Dshot y sus variantes
