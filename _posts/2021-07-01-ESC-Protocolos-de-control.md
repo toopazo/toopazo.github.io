@@ -41,7 +41,7 @@ Debido a la aparición de vehículos cada vez más pequeños y ágiles, con el t
 
 <figure>
   <img src="https://toopazo.github.io/images/esc_pwm_50Hz_400Hz.jpg" style="width:90%" alt="alt_text" />
-  <figcaption> Forma de onda de la señal de control PWM a 50Hz y a 400 Hz </figcaption>
+  <figcaption> Forma de onda de la señal de control PWM a 50 Hz y a 400 Hz </figcaption>
 </figure>
 
 |Esta frecuencia NO debe confundirse con la frecuencia eléctrica a la que operan los motores (del orden de 10 kHz), si no que es la frecuencia con la que se actualiza la velocidad del motor.|
