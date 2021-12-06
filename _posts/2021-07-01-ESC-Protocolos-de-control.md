@@ -21,9 +21,9 @@ El presente escrito es un reporte acerca de los diferentes protocolos de control
 |Historial de actualizaciones <ul><li>21-10-2021</li></ul>|
 
 
+En general, para poder controlar un multirotor pequeño y ágil (e.g. Drone de carrera, menor a 5 kg) necesitamos cambiar con más frecuentemente la velocidad a la que giran las hélices que en el caso uno más grande (más de 30 cm de largo y 5 kg de peso). Por el contrario si queremos controlar un avión de alas fijas -a menos que sea muy pequeño (menor a 10 cm y 1 kg)- una tasa de 50 Hz nos basta y sobra. 
 
-## 1) Señal analógica PWM
-
+## 1) Señales analógicas (método clásico)
 
 El modo clásico para controlar la velocidad de giro de un motor DC es usando una señal PWM analógica. Esta, por lo general varia de 0V a 5V con una frequencia de 20ms (50 Hz) y es enviada al ESC el cual se encarga de hacer girar el motor DC. La misma señal es usada en servo-motores pero es interpretada de distinta manera, en este caso no se necesita de un ESC si no que la señal es enviada directamente al dispositivo. Esta forma de onda fue durante años la manera estándar de control disponible. El ancho de cada pulso indica al ESC si el motor debía estar: 
 - detenido, pero en espera (900 us)
@@ -47,15 +47,23 @@ Debido a la aparición de vehículos cada vez más pequeños y ágiles, con el t
 |Esta frecuencia NO debe confundirse con la frecuencia eléctrica a la que operan los motores (del orden de 10 kHz), si no que es la frecuencia con la que se actualiza la velocidad del motor.|
 |--|
 
-Uno de los aspectos complicados de este tipo de señal es que son susceptibles al ruido y a variaciones temporales del pulso debido a tipo y largo de cables usados. Para subsanar esto muchas veces se hacía (ya hace) necesario hacer una calibración individual para cada ESC. 
 
-Pero además de problemas de calibración, este tipo de señal 
+Si quisiéramos llegar a tasas de 1 kHz o más necesitaremos reducir el tamaño del pulso, pasando de un rango [1 ms - 2 ms] a rangos de [125 us - 250 us] y menores. Esto se logra con los protoclos: OneShot125, OneShot42 y similares. Que son iguales a una señal PWM tradicional, pero que operan con anchos de pulso menores. 
+
+Una clara desventaja todas las señales anteriores es que son susceptibles al ruido y a variaciones de fase en el pulso, por ejemplo debido al tipo y largo de cables usados. Para subsanar esto es que muchas veces se hace necesario hacer una calibración individual para cada ESC. 
+
+## 2) Señales digitales (métodos nuevos)
+
+Evidentemente la mejor solución para lograr tasas de actualización del orden de 10 kHz y reducir errores, es pasar de una señal análoga a una digital. Esto se puede hacer usando los mismos protocolos disponibles para microcontroladores.
+
+- UART
+- I2C
+- SPI
+- CAN
+- Ethernet
 
 
-
-## 3) Dshot y sus variantes
-
-## 4) Protocolo UAVCAN
+### UAVCAN
 
 El protocolo UAVCAN es el estandar promovido por Droncode Foundation, su pagina web y documentación es https://uavcan.org/. Lamentablemente los ESC que incorporan esta tecnología son de muy bajo amperaje y no son compatibles con el motor que yo tenía dispoible para esta seria de pruebas. Queda entonces para más adelante. 
 
