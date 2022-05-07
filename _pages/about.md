@@ -1,5 +1,5 @@
 ---
-title: toopazo.github.io
+title: Welcome!
 permalink: "/"
 excerpt: About me
 author_profile: true
@@ -7,8 +7,6 @@ redirect_from:
 - "/about/"
 - "/about.html"
 ---
-
-# Welcome!
 
 My name is Tomas Opazo, welcome to my personal website. I use this site to share my portfolio and articles I write about UAV technology, autonomy and vehicle intelligence in general. I am PhD in Aerospace Engineering (PennState) -I will get my diploma in Aug 2022-, my undergrad was in Electrical Engineer (U. de Chile). 
 
