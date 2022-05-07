@@ -1,5 +1,5 @@
 ---
-title: 
+title: toopazo.github.io
 permalink: "/"
 excerpt: About me
 author_profile: true
