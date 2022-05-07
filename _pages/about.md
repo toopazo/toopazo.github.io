@@ -17,8 +17,3 @@ Esta pagina web esta pensada como plataforma de divulgación de mi trabajo de in
 Actualmente el sitio está en construcción, por lo que el único contenido a ofrecer -por ahora- son las entradas del Blog
 
 
-<p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/hjMx8EuyZJ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<\p>
-
-
