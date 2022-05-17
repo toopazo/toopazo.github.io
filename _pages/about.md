@@ -12,7 +12,7 @@ My name is Tomas Opazo, I use this website to share my portfolio and articles I 
 
 I am currently a Research Assistant at Pennstate, my work is focused on the performance and control of overactuated aerial vehicles. My CV is available [here](https://toopazo.github.io/files/toopazo_cv.pdf). I am also a member of the Technical Advisory Board of DeepView, a Chilean startup that provides AI-based solutions for the retail industry.
 
-<img src="https://toopazo.github.io/images/toopazo_avia_lab.jpeg" alt="me" width="200"/>
+<img src="https://toopazo.github.io/images/toopazo_avia_lab.jpeg" alt="me" width="300" class="center" />
 
 # Tecnología e investigación en vehículos aéreos autónomos
 
