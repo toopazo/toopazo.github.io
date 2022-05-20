@@ -16,6 +16,8 @@ I am currently a Research Assistant at Pennstate, my work is focused on the perf
 	<img src="https://toopazo.github.io/images/toopazo_avia_lab.jpeg" alt="me" width="300" />
 </p>
 
+<p>Check out <a href="https://www.freecodecamp.org/" target="_blank" rel="noopener noreferrer">freeCodeCamp</a>.</p>
+
 # Tecnología e investigación en vehículos aéreos autónomos
 
 ¡Bienvenidos! 
