@@ -16,8 +16,14 @@ I am currently a Research Assistant at Pennstate, my work is focused on the perf
 	<img src="https://toopazo.github.io/images/toopazo_avia_lab.jpeg" alt="me" width="300" />
 </p>
 
+<!-- Write your comments here
+https://www.freecodecamp.org/news/how-to-use-html-to-open-link-in-new-tab/
+
 <p>Check out <a href="https://www.freecodecamp.org/" target="_blank" rel="noopener noreferrer">freeCodeCamp</a>.</p>
-<p>Check out <a href="https://toopazo.github.io/files/toopazo_dronecode.pdf" target="_blank" rel="noopener noreferrer">Tecnologías open-source para UAV</a>.</p>
+ -->
+<a href="https://toopazo.github.io/files/toopazo_dronecode.pdf" 
+target="_blank" rel="noopener noreferrer">
+Introducción a las tecnologías open-source para vehículos aéreos autónomos</a>
 
 
 # Tecnología e investigación en vehículos aéreos autónomos
