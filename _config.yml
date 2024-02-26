@@ -1,259 +1,36 @@
----
-title: Tomas I. Opazo
-timezone: America/Los_Angeles
-collections:
-  portfolio:
-    title: Portfolio
-    output: true
-    permalink: "/:collection/:path/"
-  posts:
-    title: Posts
-    output: true
-  postscyt:
-    title: Postscyt
-    output: true
-    permalink: "/:collection/:path/"
-  postsens:
-    title: Postsens
-    output: true
-    permalink: "/:collection/:path/"
-  publications:
-    title: Publications
-    output: true
-    permalink: "/:collection/:path/"
-  talks:
-    title: Talks
-    output: true
-    permalink: "/:collection/:path/"
-  teaching:
-    title: Teaching
-    output: true
-    permalink: "/:collection/:path/"
-  uploads:
-    title: Uploads
-    output: true
-defaults:
-- scope:
-    path: ''
-    type: posts
-  values:
-    layout: single
-    author_profile: true
-    read_time: true
-    comments: true
-    share: true
-    related: true
-- scope:
-    path: ''
-    type: pages
-  values:
-    layout: single
-    author_profile: true
-- scope:
-    path: ''
-    type: teaching
-  values:
-    layout: single
-    author_profile: true
-    share: true
-    comments: true
-- scope:
-    path: ''
-    type: publications
-  values:
-    layout: single
-    author_profile: true
-    share: true
-    comments: true
-- scope:
-    path: ''
-    type: portfolio
-  values:
-    layout: single
-    author_profile: true
-    share: true
-    comment: true
-- scope:
-    path: ''
-    type: talks
-  values:
-    layout: talk
-    author_profile: true
-    share: true
-locale: es-CL
-title_separator: "-"
-name: Tomas I. Opazo
-description: Research Assitante and PhD (c) in Aerospace Eng. at Penn State University
-url: https://toopazo.github.io
-baseurl: ''
-repository: toopazo/toopazo.github.io
-teaser: 
-breadcrumbs: false
-words_per_minute: 160
-future: true
-read_more: disabled
-talkmap_link: false
+title: "toopazo"
+author: "Tomás Opazo"
+description: "Soy Tomás Opazo, el 2021 me gradué como PhD en Ing Aeroespacial en 
+PennState (PA, EEUU), allí me especialicé en optimización de sistemas dinámicos 
+y control de UAV. Actualmente vivo en Chile y trabajo en reconocimiento de acciones 
+(action recognition) como linea de investigación de IA. En este blog escribo acerca 
+de cosas de mi trabajo y otras más personas."
+permalink: /:title/
+lang: "es"
+excerpt_separator: "\n\n\n"
+date_format: "%d %m, %Y"
+
+# Layout
+
+show_excerpts: true        # show article excerpts on the home page
+show_frame: true           # adds a gray frame to the site
+show_sidebar: false        # show a sidebar instead of the usual header
+minimal: false             # use a dark header
+
+# Menu
+
+navigation:                # accepts {file, title, url, icon, sidebaricon}
+  - {file: "index.html"}
+  - {file: "README.md"}
+
+external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
+  - {title: Mail, icon: envelope, url: "mailto:toopazo@proton.me"}
+  - {title: Github, icon: github, url: "https://github.com/toopazo"}
+  - {title: Subscribe, icon: rss, url: "/feed.xml"}
+
 comments:
-  provider: 
-  disqus:
-    shortname: 
-  discourse:
-    server: 
-  facebook:
-    appid: 
-    num_posts: 
-    colorscheme: 
-staticman:
-  allowedFields:
-  - name
-  - email
-  - url
-  - message
-  branch: gh-pages
-  commitMessage: New comment.
-  filename: comment-{@timestamp}
-  format: yml
-  moderation: true
-  path: _data/comments/{options.slug}
-  requiredFields:
-  - name
-  - email
-  - message
-  transforms:
-    email: md5
-  generatedFields:
-    date:
-      type: date
-      options:
-        format: iso8601
-atom_feed:
-  path: 
-google_site_verification: 
-bing_site_verification: 
-alexa_site_verification: 
-yandex_site_verification: 
-twitter:
-  username: 
-facebook:
-  username: 
-  app_id: 
-  publisher: 
-og_image: 
-social:
-  type: 
-  name: 
-  links: 
-analytics:
-  provider: google-universal
-  google:
-    tracking_id: 
-author:
-  name: Tomas I. Opazo
-  avatar: toopazo_photo.jpg
-  bio: Ing. Eléctrico U. de Chile, PhD(c) en Ing Aeroespacial Penn State. Investigador
-    en control y optimizacion de vehículos aéreos autónomos
-  location: State College, PA, US
-  employer: 
-  pubmed: 
-  googlescholar: https://scholar.google.cl/citations?user=IJyowbsAAAAJ&hl=en
-  email: toopazo@protonmail.com
-  researchgate: https://www.researchgate.net/profile/Tomas-Opazo-2
-  uri: 
-  bitbucket: 
-  codepen: 
-  dribbble: 
-  flickr: 
-  facebook: 
-  foursquare: 
-  github: toopazo
-  google_plus: 
-  keybase: 
-  instagram: 
-  impactstory: 
-  lastfm: 
-  linkedin: 
-  orcid: https://orcid.org/0000-0003-4555-8932
-  pinterest: 
-  soundcloud: 
-  stackoverflow: 
-  steam: 
-  tumblr: 
-  twitter: 
-  vine: 
-  weibo: 
-  xing: 
-  youtube: 
-  wikipedia: 
-include:
-- ".htaccess"
-- _pages
-- files
-exclude:
-- "*.sublime-project"
-- "*.sublime-workspace"
-- ".asset-cache"
-- ".bundle"
-- ".jekyll-assets-cache"
-- ".sass-cache"
-- CHANGELOG
-- Capfile
-- Gemfile
-- Gruntfile.js
-- LICENSE
-- README
-- Rakefile
-- assets/js/_main.js
-- assets/js/plugins
-- assets/js/vendor
-- config
-- gulpfile.js
-- log
-- node_modules
-- package.json
-- tmp
-- vendor
-keep_files:
-- ".git"
-- ".svn"
-encoding: utf-8
-markdown_ext: markdown,mkdown,mkdn,mkd,md
-markdown: GFM
-highlighter: rouge
-lsi: false
-excerpt_separator: "\n\n"
-incremental: false
-kramdown:
-  input: GFM
-  hard_wrap: false
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  smart_quotes: lsquo,rsquo,ldquo,rdquo
-  enable_coderay: false
-sass:
-  sass_dir: _sass
-  style: compressed
-permalink: "/:categories/:title/"
+#  disqus_shortname: ""    # see https://disqus.com/
+#  isso_domain: ""         # see https://posativ.org/isso/
+
 plugins:
-- jekyll-paginate
-- jekyll-sitemap
-- jekyll-gist
-- jekyll-feed
-- jekyll-redirect-from
-whitelist:
-- jekyll-paginate
-- jekyll-sitemap
-- jekyll-gist
-- jekyll-feed
-- jemoji
-category_archive:
-  type: liquid
-  path: "/categories/"
-tag_archive:
-  type: liquid
-  path: "/tags/"
-compress_html:
-  clippings: all
-  ignore:
-    envs: development
+ - jekyll-feed
