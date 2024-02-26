@@ -1,19 +1,29 @@
 ---
 title: Alternativas para un vehículo aéreo no tripulado open-source
 layout: post
+mathjax: true
 ---
 
 Las compañías de Drones dominantes como DJI, Parrot, SenseFly, Freefly, etc, ofrecen al mercado soluciones cerradas de hardware y software. Sus vehículos son de muy buena calidad y su fama es merecida. Pero si nuestra intención es aprender, experimentar, modificar o innovar con esta tecnología, entonces existen alternativas mejores que nos permiten hacer todo esto y más.
 
 
-<img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/dji_matrice_300rtk.jpg" width="30%" alt="alt_text" title="image_tooltip" /> 
-<img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/freefly_astro.jpeg" width="30%" alt="alt_text" title="image_tooltip" /> 
-<img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/sensefly_ebee.jpeg" width="25%" alt="alt_text" title="image_tooltip" />
+<img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/dji_matrice_300rtk.jpg" width="33%" alt="alt_text" title="image_tooltip" /> 
+<img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/freefly_astro.jpeg" width="33%" alt="alt_text" title="image_tooltip" /> 
+<img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/sensefly_ebee.jpeg" width="28%" alt="alt_text" title="image_tooltip" />
 
+<table>
+  <tr>
+   <td>
+Este es un artículo escrito con fines de divulgación y hecho con el mayor cuidado. Pero el error siempre ronda a lo humano, si encuentras algo mal, avisame y lo corrijo.
+   </td>
+  </tr>
+  <tr>
+   <td>
+Historial de actualizaciones: Julio 2021, Agosto 2021
+   </td>
+  </tr>
+</table>
 
-|El siguiente es un artículo escrito con fines de divulgación y hecho con el mayor cuidado. Sin embargo no puedo garantizar que todo lo expues    to sea 100% correcto. Si encuentra algún error por favor háganmelo saber.|
-|--|                                                                            
-|Historial de actualizaciones <ul><li>06-07-2021</li><li>07-07-2021</li><li>19-08-2021</li></ul>|
 
 
 Existen un conjunto de proyectos open-source tanto de hardware como de software apoyados oficialmente por la fundación Dronecode ([https://www.dronecode.org/projects/](https://www.dronecode.org/projects/)). Esta es a su vez parte de la fundación Linux ([https://linuxfoundation.org/](https://linuxfoundation.org/)), la cual se dedica a fomentar el desarrollo y mantenimiento de proyectos de software libre. 
@@ -88,9 +98,9 @@ Es frecuentemente usado para volar tanto multirrotores, aviones y diseños exper
 
 La primera parte de su utilidad está basada en el procesamiento de sensores inerciales (acelerómetros, giroscopios, magnetómetro y barómetro) más sensores de posición y velocidad como los GNSS (e.g. GPS, GLONASS, BDS y Galileo). Estos sensores son combinados junto a un modelo dinámico del vehículo para obtener una estimación de las variables
 
-$$\boldsymbol{\dot{x}} = [x,y,z,u,v,w,\theta,\phi,\psi,P,Q,R]^T$$
+$$ \boldsymbol{\dot{x}} = [x,y,z,u,v,w,\theta,\phi,\psi,P,Q,R]^T $$
 
-donde $\boldsymbol{x}$ es el vector de estado,  $[x,y,z]$ la posición, $[u,v,w]$ la velocidad, $[\theta,\phi,\psi]$ la  posición angular (i.e. [ángulos de Euler](https://es.wikipedia.org/wiki/%C3%81ngulos_de_Euler)) y finalmente $[P,Q,R]$ la velocidad angular. 
+donde $$\boldsymbol{x}$$ es el vector de estado,  $$[x,y,z]$$ la posición, $$[u,v,w]$$ la velocidad, $$[\theta,\phi,\psi]$$ la  posición angular (i.e. [ángulos de Euler](https://es.wikipedia.org/wiki/%C3%81ngulos_de_Euler)) y finalmente $$[P,Q,R]$$ la velocidad angular. 
 
 
 ### Control
