@@ -2,9 +2,9 @@ title: "toopazo"
 author: "Tomás Opazo"
 description: "Soy Tomás Opazo, el 2021 me gradué como PhD en Ing Aeroespacial en 
 PennState (PA, EEUU), allí me especialicé en optimización de sistemas dinámicos 
-y control de UAV. Actualmente vivo en Chile y trabajo en reconocimiento de acciones 
-(action recognition) como linea de investigación de IA. En este blog escribo acerca 
-de cosas de mi trabajo y otras más personas."
+y control de UAV (aviones no tripulados). Actualmente vivo en Chile y trabajo en 
+reconocimiento de acciones (action recognition) como linea de investigación de IA. 
+En este blog escribo acerca de cosas de mi trabajo y otras más personales."
 permalink: /:title/
 lang: "es"
 excerpt_separator: "\n\n\n"
@@ -21,7 +21,7 @@ minimal: false             # use a dark header
 
 navigation:                # accepts {file, title, url, icon, sidebaricon}
   - {file: "index.html"}
-  - {file: "README.md"}
+  - {file: "about.md"}
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
   - {title: Mail, icon: envelope, url: "mailto:toopazo@proton.me"}

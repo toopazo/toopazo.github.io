@@ -4,26 +4,13 @@ layout: post
 mathjax: true
 ---
 
-Las compañías de Drones dominantes como DJI, Parrot, SenseFly, Freefly, etc, ofrecen al mercado soluciones cerradas de hardware y software. Sus vehículos son de muy buena calidad y su fama es merecida. Pero si nuestra intención es aprender, experimentar, modificar o innovar con esta tecnología, entonces existen alternativas mejores que nos permiten hacer todo esto y más.
-
-
+<center>
 <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/dji_matrice_300rtk.jpg" width="33%" alt="alt_text" title="image_tooltip" /> 
 <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/freefly_astro.jpeg" width="33%" alt="alt_text" title="image_tooltip" /> 
 <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/sensefly_ebee.jpeg" width="28%" alt="alt_text" title="image_tooltip" />
+</center>
 
-<table>
-  <tr>
-   <td>
-Este es un artículo escrito con fines de divulgación y hecho con el mayor cuidado. Pero el error siempre ronda a lo humano, si encuentras algo mal, avisame y lo corrijo.
-   </td>
-  </tr>
-  <tr>
-   <td>
-Historial de actualizaciones: Julio 2021, Agosto 2021
-   </td>
-  </tr>
-</table>
-
+Las compañías de Drones dominantes como DJI, Parrot, SenseFly, Freefly, etc, ofrecen al mercado soluciones cerradas de hardware y software. Sus vehículos son de muy buena calidad y su fama es merecida. Pero si nuestra intención es aprender, experimentar, modificar o innovar con esta tecnología, entonces existen alternativas mejores que nos permiten hacer todo esto y más.
 
 
 Existen un conjunto de proyectos open-source tanto de hardware como de software apoyados oficialmente por la fundación Dronecode ([https://www.dronecode.org/projects/](https://www.dronecode.org/projects/)). Esta es a su vez parte de la fundación Linux ([https://linuxfoundation.org/](https://linuxfoundation.org/)), la cual se dedica a fomentar el desarrollo y mantenimiento de proyectos de software libre. 
@@ -46,16 +33,20 @@ Pixhawk ([https://pixhawk.org/](https://pixhawk.org/)) es uno de esos proyectos 
 
 - Uno de esos fabricantes es HolyBro que comercializa el producto Pixhawk 4 ([http://www.holybro.com/product/pixhawk-4/](http://www.holybro.com/product/pixhawk-4/)).  
 
+<center>
 <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/pixhawk_4.jpg" width="30%" alt="alt_text" title="image_tooltip" />
-
+</center>
 - Otra compañía es Auterion con el producto Skynode ([https://auterion.com/drone-manufacturers/skynode/](https://auterion.com/drone-manufacturers/skynode/)). 
 
+<center>
 <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/hexproficnc_cube_orange.jpg" width="35%" alt="alt_text" title="image_tooltip" /> 
+</center>
 
 - Una tercera opción es HEX/Proficnc y el producto The Cube Orange Standard Set ([https://www.cubepilot.org/#/cube](https://www.cubepilot.org/#/cube/features)).
 
+<center>
 <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/auterion_skynode.png" width="30%" alt="alt_text" title="image_tooltip" /> 
-
+</center>
 
 
 Existe un excelente resumen de plataformas de hardware similares en la página web de PX4 ([https://docs.px4.io/master/en/flight_controller/](https://docs.px4.io/master/en/flight_controller/)). De Px4 hablaremos luego, por ahora nos basta saber que existen más alternativas. 
@@ -64,21 +55,21 @@ Además de ya mencionado computador de vuelo es necesario contar con los siguien
 
 
 - Control remoto (en manos del piloto) y radio receptora (en el vehículo) compatibles. 
-
+<center>
 <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/futaba_T8FG.jpg" width="35%" alt="alt_text" title="image_tooltip" /> 
-
+</center>
 - Radio de telemetría (en el vehículo) y otra en tierra (conectada a la estación terrena)
-
+<center>
 <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/holybro_sik_radio.jpg" width="45%" alt="alt_text" title="image_tooltip" /> 
-
+</center>
 - Actuador para multirotor: controlador de velocidad (i.e. ESC), motor y hélices
-
+<center>
 <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/multirotor_actuator_v1.jpg" width="75%" alt="alt_text" title="image_tooltip" /> 
-
+</center>
 - Actuador para avión: Servomotor y superficie de mando (en rojo)
-
+<center>
 <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/aileron_servo_v1.jpg" width="45%" alt="alt_text" title="image_tooltip" /> 
-
+</center>
 
 ## 2) Software
 
@@ -87,12 +78,13 @@ Px4 ([https://docs.px4.io/master/](https://docs.px4.io/master/)) es un software 
 Es frecuentemente usado para volar tanto multirrotores, aviones y diseños experimentales
 
 - [Quadrotor X](https://docs.px4.io/master/en/airframes/airframe_reference.html#quadrotor-x)
-
+<center>
 <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/px4_airframe_quadx.png" width="40%" alt="alt_text" title="image_tooltip" /> 
-
+</center>
 - [Standard plane](https://docs.px4.io/master/en/airframes/airframe_reference.html#standard-plane)
-
+<center>
 <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/px4_airframe_standard_plane.png" width="40%" alt="alt_text" title="image_tooltip" /> 
+</center>
 
 ### Estimación
 
@@ -113,17 +105,17 @@ En cualquier caso, el sistema dinámico del vehículo es expresado como
 
 $$\boldsymbol{\dot{x}} = \boldsymbol{f}(\boldsymbol{x}, \boldsymbol{u})$$
 
-donde $\boldsymbol{u}$ es el vector de variables de control (e.g. velocidad del motor, ángulo de deflexión del alerón). 
+donde $$\boldsymbol{u}$$ es el vector de variables de control (e.g. velocidad del motor, ángulo de deflexión del alerón). 
 
 Tanto Px4 como la mayoría de los software populares, utilizan las herramientas clásicas de control lineal y bucles PID para resolver el problema de seguimiento. En este caso se linealiza la dinámica del vehículo en torno a vuelo en estático para el caso de un multirrotores, y vuelo a velocidad constante para un avión. Así se obtiene un sistema 
 
 $$\boldsymbol{\dot{x}} = \boldsymbol{A} \boldsymbol{x} + \boldsymbol{B} \boldsymbol{u}$$
 
-donde tanto $\boldsymbol{A}$ como $\boldsymbol{B}$ son matrices con coeficientes constantes, pero dependientes del punto de linealización. La derivación matemática queda para otro ocasión, pero para el caso específico de un multirrotores, el diseño es
+donde tanto $$\boldsymbol{A}$$ como $$\boldsymbol{B}$$ son matrices con coeficientes constantes, pero dependientes del punto de linealización. La derivación matemática queda para otro ocasión, pero para el caso específico de un multirrotores, el diseño es
 
-
+<center>
 <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/px4_mc_control_arch.jpg" width="100%" alt="alt_text" title="image_tooltip" /> 
-
+</center>
 
 La entrada al diagrama es el conjunto de comandos del piloto, la salida corresponde a los comandos a los motores del vehículo y/o servo motores. 
 
@@ -135,17 +127,17 @@ La velocidad a la que se ejecuta este bucle es de vital importancia, tanto en lo
 QGroundControl ([http://qgroundcontrol.com/](http://qgroundcontrol.com/)) es también uno de esos proyectos apoyados por Dronecode. Es un software que provee las funcionalidades necesarias de una estación terrena basada en el protocolo de comunicaciones MAVLink ([https://mavlink.io/en/](https://mavlink.io/en/)). Es decir, configuración en tierra del vehículo, telemetría en vuelo del vehículo y gestión de misiones autónomas. 
 
 En concreto con este programa se puede saber planificar las zonas en que un vehículo volará, las zonas prohibidas, etc. Y una vez en el aire, conocer en todo en línea la posición, velocidad, carga de baterías y otros valores de vuelo importantes. 
-
+<center>
 <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/qgroundcontrol_preview.jpg" width="100%" alt="alt_text" title="image_tooltip" /> 
+</center>
 
 ## 4) Capacidades de cámara y video 
 
 Evidentemente un vehículo aéreo que no pueda transportar cámaras, sensores y carga es de baja utilidad para los usuarios de esta plataforma. Es por ello que cualquier alternativa a las soluciones de las compañías comerciales dominantes debe contemplar esta utilidad. En conjunto, PX4 y QGroundControl permiten hacer streaming de video. Personalmente no he probado esta opción, pero es algo que planeo hacer pronto.
 
-
+<center>
 <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/qgroundcontrol_gstreamer.png" width="100%" alt="alt_text" title="image_tooltip" /> 
-
-
+</center>
 
 ## 5) Capacidades de ADS–B
 
@@ -159,3 +151,15 @@ ADS-B (i.e [Automatic Dependent Surveillance-Broadcast](https://en.wikipedia.org
 2. Bucles de control en el PX4 [https://docs.px4.io/master/en/flight_stack/controller_diagrams.html#multicopter-control-architecture](https://docs.px4.io/master/en/flight_stack/controller_diagrams.html#multicopter-control-architecture)
 
 
+<table>
+  <tr>
+   <td>
+Este es un artículo escrito con fines de divulgación y hecho con el mayor cuidado. Pero el error siempre ronda a lo humano. Si encuentras algo mal, avisame y lo corrijo.
+   </td>
+  </tr>
+  <tr>
+   <td>
+Historial de actualizaciones: Julio 2021, Agosto 2021
+   </td>
+  </tr>
+</table>
