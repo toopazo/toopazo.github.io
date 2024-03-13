@@ -7,6 +7,9 @@ Una opción muy conocida para tener un sitio web de tipo blog es [Github Pages](
 
 # Github pages
 ## Themes (plantillas)
+http://jekyllthemes.org/search/?query=blog
+
+https://github.com/amitmerchant1990/reverie
 https://reverie.pages.dev/
 
 
