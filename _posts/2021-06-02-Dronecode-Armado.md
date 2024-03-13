@@ -5,13 +5,13 @@ mathjax: true
 categories: media
 ---
 
-El presente escrito es la versión practica de [Alternativas Dronecode](toopazo.github.io/postscyt/Alternativas-Dronecode), un articulo anterior acerca de las alternativas open-source disponibles para volar un vehículo aéreo no tripulado. En particular explicaremos los componentes principales de todo multirotor, y nuestra experiencia al armar un kit [S500 v2](https://shop.holybro.com/s500-v2-kitmotor2216-880kv-propeller1045_p1153.html) de la empresa Holybro. Más que el armado en si mismo trataremos de describir la estructura general de todo vehículo así como los pasos que seguimos para verificar su correcto armado y vuelo.
+El presente escrito es la versión practica de [Alternativas Dronecode](https://toopazo.github.io/Dronecode-Alternativas/), un articulo anterior acerca de las alternativas open-source disponibles para volar un vehículo aéreo no tripulado. En particular explicaremos los componentes principales de todo multirotor, y nuestra experiencia al armar un kit [S500 v2](https://shop.holybro.com/s500-v2-kitmotor2216-880kv-propeller1045_p1153.html) de la empresa Holybro. Más que el armado en si mismo trataremos de describir la estructura general de todo vehículo así como los pasos que seguimos para verificar su correcto armado y vuelo.
 
 <center>
 <figure>
-  <img src="https://toopazo.github.io/images/holybro_S500_v2.jpg" style="width:25%" alt="alt_text" /> 
-  <img src="https://toopazo.github.io/images/holybro_S500_v2_juan2.jpeg" style="width:30%" alt="alt_text" /> 
-  <img src="https://toopazo.github.io/images/holybro_S500_v2_juan3.jpeg" style="width:30%" alt="alt_text" />
+  <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/holybro/holybro_S500_v2.jpg" style="width:25%" alt="alt_text" /> 
+  <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/holybro/holybro_S500_v2_juan2.jpeg" style="width:30%" alt="alt_text" /> 
+  <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/holybro/holybro_S500_v2_juan3.jpeg" style="width:30%" alt="alt_text" />
   <figcaption> Kit S500 de Holybro, armado por Juan Cespedes, Agosto 2021 </figcaption>
 </figure> 
 </center>
@@ -22,7 +22,7 @@ El presente escrito es la versión practica de [Alternativas Dronecode](toopazo.
 Para los amantes del concepto open-source existen en la actualidad una serie de kits de vehículos multirotor que pueden ser adquiridos y armados por alguien con relativamente poca experiencia. La idea de este escrito es reducir esa barrera aún más. Es más, una simple búsqueda en la web por "frame kit multirotor drone" nos arroja una serie de alternativas para distintos propósitos: fotografía, carrera de Drones, filmación, carga, etc. 
 
 <figure>
-  <img src="https://toopazo.github.io/images/uav_frame_kit.png" style="width:90%" alt="alt_text" class="center"/> 
+  <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/uav_frame_kit.png" style="width:90%" alt="alt_text" class="center"/> 
   <figcaption> Ejemplo de kits disponibles para armado de Drones, precio en USD </figcaption>
 </figure> 
 
@@ -33,14 +33,14 @@ El tamaño, peso, geometría y numero de brazos del esqueleto viene definido por
 Los actuadores son la suma de ESC + Motores + Hélices. Los controladores de motor son conocidos en inglés como [Electronic Speed Controllers (ESC)](https://en.wikipedia.org/wiki/Electronic_speed_control) y son los encargados de regular su velocidad de giro. Para multirotores casi siempre se utilizan [motores de corriente continua y sin escobilla (burshless DC motors)](https://en.wikipedia.org/wiki/Brushless_DC_electric_motor). Finalmente las hélices son las laminas diseñadas para rotar y desplazar el aire circundante de manera de generar empuje. 
 
 <figure>
-  <img src="https://toopazo.github.io/images/multirotor_actuator_v1.jpg" style="width:70%" alt="alt_text" />
+  <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/multirotor_actuator_v1.jpg" style="width:70%" alt="alt_text" />
   <figcaption> Ejemplo de ESC + motor + hélice usados comúnmente </figcaption>
 </figure> 
 
 Finalmente tenemos el computador de vuelo, el cual es el encargado de estimar la posición y orientación del vehículo usando sensores inerciales, GPS y otros. Es además el encargado de coordinar los sistemas de radio, control remoto y demás electrónica. El computador en si mismo contiene los sensores más todo el software de vuelo.
 
 <figure>
-  <img src="https://toopazo.github.io/images/pixhawk4_wiring_overview.png" style="width:80%" alt="alt_text" />
+  <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/pixhawk4_wiring_overview.png" style="width:80%" alt="alt_text" />
   <figcaption> Ejemplo de computador de vuelo. Fuente: <a href="https://docs.px4.io/master/en/assembly/quick_start_pixhawk4.html">docs.px4.io</a> </figcaption>
 </figure> 
 
@@ -57,15 +57,15 @@ Existen además múltiples tutoriales y una muy buena serie de videos en Youtube
 Más abajo se puede ver una sucinta serie de fotos de nuestra experiencia en el armado
 
 <figure>
-  <img src="https://toopazo.github.io/images/holybro_S500_v2_juan4.jpeg" style="width:30%" alt="alt_text" /> 
-  <img src="https://toopazo.github.io/images/holybro_S500_v2_juan7.jpeg" style="width:30%" alt="alt_text" /> 
-  <img src="https://toopazo.github.io/images/holybro_S500_v2_juan9.jpeg" style="width:30%" alt="alt_text" />
+  <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/holybro/holybro_S500_v2_juan4.jpeg" style="width:30%" alt="alt_text" /> 
+  <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/holybro/holybro_S500_v2_juan7.jpeg" style="width:30%" alt="alt_text" /> 
+  <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/holybro/holybro_S500_v2_juan9.jpeg" style="width:30%" alt="alt_text" />
   <figcaption> Kit S500 de Holybro, armado por Juan Cespedes, Agosto 2021 (parte 1) </figcaption>
 </figure> 
 <figure>
-  <img src="https://toopazo.github.io/images/holybro_S500_v2_juan1.jpeg" style="width:30%" alt="alt_text" /> 
-  <img src="https://toopazo.github.io/images/holybro_S500_v2_juan2.jpeg" style="width:30%" alt="alt_text" /> 
-  <img src="https://toopazo.github.io/images/holybro_S500_v2_juan3.jpeg" style="width:30%" alt="alt_text" />
+  <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/holybro/holybro_S500_v2_juan1.jpeg" style="width:30%" alt="alt_text" /> 
+  <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/holybro/holybro_S500_v2_juan2.jpeg" style="width:30%" alt="alt_text" /> 
+  <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/holybro/holybro_S500_v2_juan3.jpeg" style="width:30%" alt="alt_text" />
   <figcaption> Kit S500 de Holybro, armado por Juan Cespedes, Agosto 2021 (parte 2) </figcaption>
 </figure> 
 
@@ -77,7 +77,7 @@ Luego del armado mecánico es imprescindible realizar una verificación tanto de
 - Paso 1:  Verificar que la señal de control de cada motor este correctamente conectada con el computador de vuelo, en posición y polaridad.
 
 <figure>
-  <img src="https://toopazo.github.io/images/holybro_S500_v2_armado_1.png" style="width:60%" alt="alt_text" />
+  <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/holybro/holybro_S500_v2_armado_1.png" style="width:60%" alt="alt_text" />
   <figcaption> Orden y polaridad de conexión entre computador de vuelo y motores </figcaption>
 </figure> 
 
@@ -85,7 +85,7 @@ Luego del armado mecánico es imprescindible realizar una verificación tanto de
 
 <center>
 <figure>
- <img src="https://toopazo.github.io/images/holybro_quadrotor_x.png" style="width:30%" alt="alt_text" />  
+ <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/holybro/holybro_quadrotor_x.png" style="width:30%" alt="alt_text" />  
 </figure> 
 <figcaption> Ubicación y sentido de giro de los motores en el modelo Quadrotor x (SYS_AUTOSTART = 4015) </figcaption>
 </center>
@@ -96,7 +96,7 @@ Luego del armado mecánico es imprescindible realizar una verificación tanto de
 Tal como lo muestra la imagen del paso anterior, los motores deben girar en una determinada dirección. En caso de que el motor no gire en el sentido correcto la solución más sencilla es intercambiar dos de los tres cables que van desde el ESC al motor. 
 
 <figure>
-  <img src="https://toopazo.github.io/images/holybro_S500_spin_swap.jpeg" style="width:70%" alt="alt_text" />
+  <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/holybro/holybro_S500_spin_swap.jpeg" style="width:70%" alt="alt_text" />
   <figcaption> Intercambio de cables necesarios entre el ESC y el motor para cambiar el sentido de giro </figcaption>
 </figure> 
 
@@ -105,14 +105,14 @@ Tal como lo muestra la imagen del paso anterior, los motores deben girar en una 
 Las hélices empleadas en estos kits y todas las comercializadas en el segmento multirotor vienen en dos tipos: horarias y anti-horarias. Cada hélice está diseñada para girar en un solo sentido. Si se gira en sentido contrario pasan dos cosas: 1) trabajará de manera ineficiente y produciendo una fuerza en sentido contrario (hacia abajo) y 2) si es de tipo "rosca" terminara desprendiéndose del eje del motor. 
 
 <figure>
-  <img src="https://toopazo.github.io/images/helices_rotacion.png" style="width:70%" alt="alt_text" />
+  <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/helices_rotacion.png" style="width:70%" alt="alt_text" />
   <figcaption> Hélice de rotación ani-horario (tapa negra) y horaria (tapa plateada) y su vista lateral </figcaption>
 </figure> 
 
 Existen además diferentes tipos de mecanismos de sujeción entre la hélice y el motor. Las hélices más avanzadas tienden a tener adaptadores que se unen con pernos a la carcasa de giro del motor. De esta manera la hélice queda sujeta independiente del sentido de giro. Obviamente si la hélice gira en sentido incorrecto no habrá la generación de fuerza deseada.
 
 <figure>
-  <img src="https://toopazo.github.io/images/kde_adapter.png" style="width:100%" alt="alt_text" />
+  <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/kde_adapter.png" style="width:100%" alt="alt_text" />
   <figcaption> Adaptador para la fijación de la hélice al motor, frecuente en modelos más avanzados </figcaption>
 </figure> 
 
@@ -121,7 +121,7 @@ Un segundo tipo de mecanismo más simple consta de un rosca o hilo que traba la 
 **Es muy importante realizar esta comprobación SIN BATERÍAS conectadas y sin haber energizado los motores. Solo se deben hacer girar los motores con las hélices montadas en el día, lugar y hora en la que se va a volar.**
 
 <figure>
-  <img src="https://toopazo.github.io/images/kde_adapter_rosca.png" style="width:100%" alt="alt_text" />
+  <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/kde_adapter_rosca.png" style="width:100%" alt="alt_text" />
   <figcaption> Rosca o hilo para la fijación de la hélice al motor, frecuente en modelos más básicos </figcaption>
 </figure> 
 
@@ -129,9 +129,9 @@ Un segundo tipo de mecanismo más simple consta de un rosca o hilo que traba la 
 ## 4) Primer vuelo
 
 <figure>
-  <img src="https://toopazo.github.io/images/holybro_S500_v2_vuelo_2021-09-05_vista2.jpeg" style="width:30%" alt="alt_text" /> 
-  <img src="https://toopazo.github.io/images/holybro_S500_v2_vuelo_2021-09-05_vista3.jpeg" style="width:30%" alt="alt_text" /> 
-  <img src="https://toopazo.github.io/images/holybro_S500_v2_vuelo_2021-09-05_vista1.jpeg" style="width:30%" alt="alt_text" />
+  <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/holybro/holybro_S500_v2_vuelo_2021-09-05_vista2.jpeg" style="width:30%" alt="alt_text" /> 
+  <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/holybro/holybro_S500_v2_vuelo_2021-09-05_vista3.jpeg" style="width:30%" alt="alt_text" /> 
+  <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/holybro/holybro_S500_v2_vuelo_2021-09-05_vista1.jpeg" style="width:30%" alt="alt_text" />
   <figcaption> Kit S500 de Holybro en su primer vuelo, Septiembre 2021 </figcaption>
 </figure>
 
