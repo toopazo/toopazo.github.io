@@ -9,9 +9,9 @@ El presente escrito es un reporte acerca de los diferentes protocolos de control
 
 <center>
 <figure>
-  <img src="https://toopazo.github.io/images/uavcan_esc.png" style="width:45%" alt="alt_text" /> 
-  <img src="https://toopazo.github.io/images/castle_phoenix_edge_hv_80.jpg" style="width:25%" alt="alt_text" /> 
-  <img src="https://toopazo.github.io/images/kde-uas85uvc.jpg" style="width:25%" alt="alt_text" />
+  <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uavcan_esc.png" style="width:45%" alt="alt_text" /> 
+  <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/castle_phoenix_edge_hv_80.jpg" style="width:25%" alt="alt_text" /> 
+  <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/kde-uas85uvc.jpg" style="width:25%" alt="alt_text" />
   <figcaption> Diferentes modelos de ESC usados en multirotores: Orel y Kotleta (UAVCAN), Phoenix Edge y KDE-UAS </figcaption>
 </figure> 
 </center>
@@ -30,7 +30,7 @@ La siguiente imagen del sitio web [howtomechatronics.com](https://howtomechatron
 
 <center>
 <figure>
-  <img src="https://toopazo.github.io/images/esc_pwm_howtomechatronics.png" style="width:90%" alt="alt_text" />
+  <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/esc_pwm_howtomechatronics.png" style="width:90%" alt="alt_text" />
   <figcaption> Forma de onda de la señal de control PWM con la que un ESC controla la velocidad de un motor </figcaption>
 </figure>
 </center>
@@ -39,7 +39,7 @@ Debido a la aparición de vehículos cada vez más pequeños y ágiles, con el t
 
 <center>
 <figure>
-  <img src="https://toopazo.github.io/images/esc_pwm_50Hz_400Hz.jpg" style="width:90%" alt="alt_text" />
+  <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/esc_pwm_50Hz_400Hz.jpg" style="width:90%" alt="alt_text" />
   <figcaption> Forma de onda de la señal de control PWM a 50 Hz y a 400 Hz </figcaption>
 </figure>
 </center>
