@@ -9,9 +9,9 @@ El presente escrito es un reporte acerca de mi experiencia programando un ESC pa
 
 <center>
 <figure>
-  <img src="https://toopazo.github.io/images/uavcan_esc.png" style="width:45%" alt="alt_text" /> 
-  <img src="https://toopazo.github.io/images/castle_phoenix_edge_hv_80.jpg" style="width:25%" alt="alt_text" /> 
-  <img src="https://toopazo.github.io/images/kde-uas85uvc.jpg" style="width:25%" alt="alt_text" />
+  <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uavcan_esc.png" style="width:45%" alt="alt_text" /> 
+  <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/castle_phoenix_edge_hv_80.jpg" style="width:25%" alt="alt_text" /> 
+  <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/kde-uas85uvc.jpg" style="width:25%" alt="alt_text" />
   <figcaption> Diferentes modelos de ESC usados en multirotores: Orel y Kotleta (UAVCAN), Phoenix Edge y KDE-UAS </figcaption>
 </figure>
 </center> 
@@ -53,7 +53,7 @@ El ESC exacto en ser probado corresponde al modelo [Phoenix Edge HV 80 AMP ESC](
 
 <center>
 <figure>
-  <img src="https://toopazo.github.io/images/castle_link_programmer.jpeg" style="width:90%" alt="alt_text" />
+  <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/castle_link_programmer.jpeg" style="width:90%" alt="alt_text" />
   <figcaption> Conexión entre el programador USB (Castle Link v3 USB programming kit) y el ESC </figcaption>
 </figure>
 </center> 
@@ -62,7 +62,7 @@ Una vez teniendo conectado el ESC al programador USB debemos descargar el progra
 
 <center>
 <figure>
-  <img src="https://toopazo.github.io/images/castle_enable_live_link.png" style="width:90%" alt="alt_text" />
+  <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/castle_enable_live_link.png" style="width:90%" alt="alt_text" />
   <figcaption> Pasos 1, 2 y 3 para habilitar el "Castle Link Live" en los ESC de Castle Creations </figcaption>
 </figure> 
 </center>
@@ -71,7 +71,7 @@ Una vez habilitada la comunicación por protocolo [Castle Link Live](https://www
 
 <center>
 <figure>
-  <img src="https://toopazo.github.io/images/castle_usbFtdi_serialLink.png" style="width:90%" alt="alt_text" />
+  <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/castle_usbFtdi_serialLink.png" style="width:90%" alt="alt_text" />
   <figcaption> Conexión entre conversor USB Ftdi y Castle Serial Link </figcaption>
 </figure>
 </center> 
@@ -89,7 +89,7 @@ El primer script de python crea un archivo con los datos obtenidos desde el ESC,
 
 <center>
 <figure>
-  <img src="https://toopazo.github.io/images/phoenix_edge_hv_telemtry_pandas.png" style="width:100%" alt="alt_text" />
+  <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/phoenix_edge_hv_telemtry_pandas.png" style="width:100%" alt="alt_text" />
   <figcaption> Telemetría en vivo obtenida a través del Serial Link </figcaption>
 </figure>
 </center> 
@@ -129,7 +129,7 @@ El primer script de python ejecutado se comunica con el ESC y guarda los datos a
 
 <center>
 <figure>
-  <img src="https://toopazo.github.io/images/kdecan_telemtry_pandas.png" style="width:100%" alt="alt_text" />
+  <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/kdecan_telemtry_pandas.png" style="width:100%" alt="alt_text" />
   <figcaption> Telemetría en vivo obtenida a través de KDECAN </figcaption>
 </figure>
 </center> 
