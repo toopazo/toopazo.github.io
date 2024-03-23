@@ -3,7 +3,14 @@ title: ¿Porque usar Github Pages y Jekyll para una página web tipo Blog?
 layout: post
 ---
 
-[WordPress](https://wordpress.com/) es un gestor de paginas web escrito en PHP e integrado a bases de datos locales para almacenar el contenido en si. Su código fuente es open-source y su uso es gratuito [[1](https://en.wikipedia.org/wiki/WordPress)]. Contiene cientos de miles de ejemplos y extensiones de todo tipo para ser usado en miles de casos diferentes. Existe un ecosistema completo girando al rededor de su uso, desde los servidores que lo alojan (Hostinger, Bluehost, Ionos y miles de miles más) hasta creadores de plugins que lo complementan.  Se estima que cerca del 40% de todos los sitios web disponibles en internet operan usando WordPress [[2](https://www.hostinger.com/tutorials/why-use-wordpress?)]. Por todo lo anterior vale la pena invertir la pregunta y cuestionarse: ***¿porque no usar WordPress?***. 
+[WordPress](https://wordpress.com/) es un gestor de paginas web escrito en PHP e integrado a bases de datos locales para almacenar el contenido en si. Su código fuente es open-source y su uso es gratuito [[1](https://en.wikipedia.org/wiki/WordPress)]. Contiene cientos de miles de ejemplos y extensiones de todo tipo para ser usado en miles de casos diferentes. Existe un ecosistema completo girando al rededor de su uso, desde los servidores que lo alojan (Hostinger, Bluehost, Ionos y miles de miles más) hasta creadores de plugins que lo complementan.  Y para rematar la cosa, se estima que cerca del 40% de todos los sitios web disponibles en internet operan usando WordPress [[2](https://www.hostinger.com/tutorials/why-use-wordpress?)]. Por todo lo anterior vale la pena invertir la pregunta y cuestionarse: ***¿porque no usar WordPress?***. 
+
+<center>
+<figure>
+  <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/gituhbpages_wordpress.png" style="width:100%" alt="alt_text" /> 
+</figure> 
+</center>
+
 
 Pues sucede que existe un pequeñito pero importante nicho de usuarios para los que la respuesta es diferente. Esto se debe, a mi juicio, debido a dos factores: costo y publico objetivo. 
 
