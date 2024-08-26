@@ -34,3 +34,6 @@ comments:
 
 plugins:
  - jekyll-feed
+
+exclude:
+  - excluded
