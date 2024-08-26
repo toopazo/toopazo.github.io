@@ -1,10 +1,12 @@
 title: "toopazo"
 author: "Tomás Opazo"
-description: "Soy Tomás Opazo, el 2021 me gradué como PhD en Ing Aeroespacial en 
-PennState (PA, EEUU), allí me especialicé en optimización de sistemas dinámicos 
-y control de UAV (aviones no tripulados). Actualmente vivo en Chile y trabajo en 
-reconocimiento de acciones (action recognition) como linea de investigación de IA. 
-En este blog escribo acerca de cosas de mi trabajo y otras más personales."
+description: "Mi nombre es Tomás Opazo, chileno, casado y padre de un retoño. 
+El 2021 me gradué como PhD en Ing Aeroespacial en PennState (PA, EEUU), 
+allí me especialicé en optimización de sistemas dinámicos 
+y control de UAV (aviones no tripulados). Actualmente vivo en Santiago y trabajo en 
+una empresa de IA para el retail. Mi linea de trabajo es visión computacional y 
+reconocimiento de acciones (action recognition). En este blog escribo acerca de cosas 
+de mi trabajo y otros temas personales."
 permalink: /:title/
 lang: "es"
 excerpt_separator: "\n\n\n"
