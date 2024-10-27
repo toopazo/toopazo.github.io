@@ -16,7 +16,7 @@ Mi nombre es Tomas Opazo, soy Ing. Electrico de la U. de Chile y Dr en Ing. Aero
 
 Esta pagina web esta pensada como plataforma de divulgación de mi trabajo de investigación en control y optimización de vehículos autónomos (Drones, UAV, UAS o como prefiera Ud. llamarlos) y dentro del mundo IA a lo que es action recognition. No puedo garantizar que todo lo expuesto sea 100% correcto, pero es mi mejor intento. Si encuentra algún error por favor háganmelo saber. 
 
-Me pueden contactar en **toopazo@proton.me** en general con ese usuario en otras redes sociales.
+Me pueden contactar en **toopazo@proton.me**. Uso el mismo usuario en otras redes sociales.
 
 - [Google Scholar](https://scholar.google.cl/citations?user=IJyowbsAAAAJ&hl=en)
 - [Research Gate](https://www.researchgate.net/profile/Tomas-Opazo-2)
