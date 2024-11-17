@@ -7,12 +7,14 @@ layout: post
 
 En el contexto de entender como será el siglo XXI en cuanto a ideología política es qe la frase de Deng Xiaoping puede ser analizada en forma de pregunta-contraste: **¿existe una alternativa, o siquiera variaciones relevantes, al sistema liberal en lo filosófica, valórico, económico y político (entendido como sistema de gobierno democrático "estándar")?**. 
 
-
 <center>
 <figure>
   <img src="/assets/images/libros_liberal_complejo.jpeg" style="width:100%" alt="alt_text" /> 
 </figure> 
 </center>
+
+<!-- conflicto_cercano.jpg -->
+
 
 
 Esta pregunta no es nueva. Ya en los años 90, luego de la caída de la Union Soviética se dieron profundas discusiones acerca de este mismo tema. Buena parte de ellas quedaron retratadas en el debate entre Huntington (propulsor del dueto inmanente de civilización e ideología) y Fukuyama (propulsor del triunfo del liberalismo anglosajón). En una especie de continuación del debate, en los últimos 10 años ha cobrado gran relevancia el pensamiento anti-liberal de Dugin y su idea de multipolaridad, mientras por el otro bando tenemos la continuación del proyecto liberal a través de la agenda de identidades y autores como Yuval Harari. 

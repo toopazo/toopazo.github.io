@@ -5,7 +5,7 @@ layout: page
 --- -->
 
 ## Notas previas
-Ya ni recuerdo bien como instalé la plantilla de Jekyll para el sitio web, pero github me indica que es un fork de https://github.com/academicpages/academicpages.github.io y bueno, así debe ser.
+Ya no recuerdo como instalé la plantilla de Jekyll para el sitio web, pero github me indica que es un fork de https://github.com/academicpages/academicpages.github.io y bueno, así debe ser.
 
 ## Instrucciones para actualizar contenido. 
 
@@ -18,11 +18,10 @@ En general las referencias son dos:
 Tomé las instrucciones desde el sitio de [documentación de Github Pages](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll)
 
 ```
-bundle exec jekyll serve
+bundle exec jekyll serve --livereload
 ```
-
 
 
 ### Agregar un nuevo articulo
 
-Crear documento de texto en carpeta '_posts' enformato yyy-mm-dd-nombre-archivo.md
+Crear documento de texto en carpeta '_posts' en formato yyy-mm-dd-nombre-archivo.md
