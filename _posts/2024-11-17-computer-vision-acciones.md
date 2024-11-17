@@ -1,5 +1,5 @@
 ---
-title: Reconocimiento kinestécico (HAR)
+title: Reconocimiento kinestésico (HAR)
 layout: post
 ---
 ¿Fue penal?.
