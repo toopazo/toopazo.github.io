@@ -27,6 +27,11 @@ El sueño de este proyecto es el siguiente. Imaginemos que ponemos una cámara e
 </figure> 
 </center>
 
+## Pero, ¿es aún un sueño?. ¿No ha sido ya alcanzado?
+
+
+
+
 ## Los ingredientes tecnológicos
 
 Para poder realizar el reconocimiento facial se necesita de varios pasos (ver imagen). En este proyecto se trabajó con las siguientes herramientas tecnológicas:
