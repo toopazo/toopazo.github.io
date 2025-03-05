@@ -79,7 +79,7 @@ En cuanto a las implementaciones disponibles. Algunos repositorios que tienen al
 
 ## ¿Como implementar el sueño?
 
-Para poder realizar el reconocimiento facial se necesita de varios pasos (ver imagen). En este proyecto se trabajó con las siguientes herramientas tecnológicas:
+En este proyecto se trabajó con las siguientes herramientas tecnológicas:
 
 <center>
 <figure>
