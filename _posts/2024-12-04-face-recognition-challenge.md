@@ -75,6 +75,7 @@ En cuanto a las implementaciones disponibles. Algunos repositorios que tienen al
 - https://github.com/wansook0316/MultiFaceTrackerUsingDeepsort
 - https://github.com/deepinsight/insightface
 
+# Airflow: Mi (humilde) implementación
 
 ## ¿Como implementar el sueño?
 
@@ -119,7 +120,7 @@ En el caso del reconocimiento de rostros. La forma más sencilla (pero no la má
  
 <!-- ## Los desafíos -->
 
-## Mi código
+## El código
 
 El código esta disponible para su uso libre y gratuito en [https://github.com/toopazo/airflow](https://github.com/toopazo/airflow). Allí mismo están todas las instrucciones de instalación y ejecución. 
 
