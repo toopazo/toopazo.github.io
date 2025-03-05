@@ -3,7 +3,7 @@ title: Reconocimiento facial a partir de videos
 layout: post
 ---
 
-Dentro de la amplia gama de problemas que la visión computacional busca resolver, el problema de reconocimiento facial no requiere de mucha introducción. Es fácil entender su gran impacto en aplicaciones de negocios, seguridad, legales, etc. Probablemente todos los que lean este articulo se habrán encontrado con alguna aplicación de celular que la requiera. Y hasta puede que se hayan preguntado por que su aplicación no es aún más masiva. 
+Dentro de la amplia gama de problemas que la visión computacional busca resolver, el problema de reconocimiento facial no requiere de mucha introducción. Es fácil entender su gran impacto en aplicaciones de negocios, seguridad, legales, etc. Probablemente todos los que lean este articulo se habrán encontrado con alguna aplicación móvil que la requiera. Y hasta puede que se hayan preguntado por que su aplicación no es aún más masiva. 
 
 En este articulo me gustaría presentar mi trabajo en una variante particular del problema de reconocimiento facial: <<el reconocimiento de rostros a partir de videos>>. Explicado en sencillo, el desafío es lograr reconocer a la mayor cantidad de personas que aparecen en un video a medida que avanza. Es decir, si al segundo 23 apareció Juan Perez y al segundo 43 Maria Sandoval, queremos que el sistema reconozca a cada uno de ellos durante todo el tiempo que permanezcan en escena. Al final de la escena queremos tener una secuencia de recortes del rostro de Juan y otra secuencia de recortes del rostro de María. Si más adelante en el video, Juan o María vuelven a aparecer, queremos re-conocerlos y saber que son ellos. Aunque tengan otra ropa o estén en otro lugar físico. 
 
@@ -16,9 +16,9 @@ En este articulo me gustaría presentar mi trabajo en una variante particular de
 
 ## El sueño
 
-El sueño de este proyecto es el siguiente. Imaginemos que ponemos una cámara en pleno Paseo Ahumada, y que grabamos los rostros de todos los que pasan por ahí. Detectamos a cada persona que transita, obtenemos la representación de sus rostros en un [vector de espacio latente](https://hackernoon.com/lang/es/espacio-latente-visualizacion-aprendizaje-profundo-bits-2-bd09a46920df) y los guardamos en una base de datos de gran tamaño. Es decir, muchos millones de secuencias, donde cada secuencia contiene el rostro de una persona a medida que se mueve en la escena. Un par de días después y en el otro extremo de la ciudad, activamos el sistema en un Mall concurrido. Allí realizamos la misma operación comparando a los transeúntes. El resultado esperado es darnos cuenta que la misma persona que caminó por el Paseo Ahumada, caminó por el Mall un par de días después. 
+El sueño de este proyecto es el siguiente. Imaginemos que ponemos una cámara en pleno Paseo Ahumada, y que grabamos los rostros de todos los que pasan por ahí. Detectamos a cada persona que transita, obtenemos la representación de su rostro en un [vector de espacio latente](https://hackernoon.com/lang/es/espacio-latente-visualizacion-aprendizaje-profundo-bits-2-bd09a46920df) y lo guardamos en una base de datos de gran tamaño (20 millones de chilenos). Esto significa que guardaremos decenas de millones de secuencias. Cada secuencia contendrá el rostro de una persona a medida que se mueve en la escena. Días después y en otro extremo de la ciudad (un Mall concurrido, una estación de Metro, etc) el sistema realiza la misma operación. Luego de procesar la nueva secuencia, una notificación automática registra en la base de datos que la misma persona fue vista en ese nuevo lugar. 
 
-**ACLARACIÓN**: En esta propuesta NO estamos buscando identificar a las personas (e.g. nombre, rut, domicilio), sino re-conocer que las vimos y que son la misma persona (e.g rostro 2345 de la base de datos). 
+**ACLARACIÓN**: En esta propuesta NO estamos buscando identificar a las personas (asignar nombre, rut, domicilio a cada rostro), sino re-conocer que hemos vuelvo ver al mismo rostros en otra parte del video (e.g rostro 2345 visto en lugar X y luego en lugar Y con fecha y hora respectiva). 
 
 
 <center>
@@ -27,12 +27,71 @@ El sueño de este proyecto es el siguiente. Imaginemos que ponemos una cámara e
 </figure> 
 </center>
 
-## Pero, ¿es aún un sueño?. ¿No ha sido ya alcanzado?
+## Estado del arte
+
+Existe muchísima bibliografía de reconocimiento facial. Sin embargo, acá nos estamos enfocando en reconocimiento en base a videos, es decir, reconocimiento que haga uso de la variable temporal. Las implementaciones frame-a-frame no son consideradas, porque presuponen de una estructura y contexto que no se da en el escenario que planteamos en ***El sueño***. Es por ello que soluciones como Amazon Rekognition, daon.com, idemia.com y similares no son consideradas acá. 
+
+Como ya hemos dicho, lo que buscamos es incorporar la variable temporal dentro del análisis, y decidir en base a una secuencia de imágenes de rostros, no una sola. Existen al menos dos alternativas: (1) agrupar las detecciones de rostros y comparar entre agrupaciones, y (2) fusionar las detecciones de rostros en una sola representación (un solo vector) y comprar entre esas representaciones. 
+
+Para la primera alternativa se suelen ocupar técnicas de búsqueda y comparación de vectores en clusters. Para la segunda alternativa existen algoritmos que fusionan las secuencias en un solo vector, como por ejemplo, averaging, temporal pooling o los famosos attention mechanisms de los LLM.
+
+El análisis de la bibliografía del área representa un desafío en si misma. Ya que esta bastante repartida, en distintos trabajos que buscan distintos objetivos. Por mi parte especularía que una de las razones para el avance tan veloz de los modelos de redes neuronales ha sido la existencia de desafíos claros y dataset accesibles. Eso ha permitido crear tablero de seguimiento unificados y verificables como los de [Face Recognition en paperswithcode.com](https://paperswithcode.com/task/face-recognition). Esta cultura de problema unificado + datos abiertos + métricas de seguimiento han sido claves en el éxito del área. Por ejemplo, el reconocimiento de rostros en base a imágenes tiene tableros como el siguiente. 
 
 
+<center>
+<figure>
+  <img src="/assets/images/face_rec_celebAmasks.png" style="width:100%" alt="alt_text" /> 
+</figure> 
+</center>
+
+En el caso de ***reconocimiento facial a partir de videos*** , si bien existen dataset disponibles (YouTube Faces DB, IJB-S, HACS), la definición de que problema se quiere resolver aún no tiene una delimitación unificada. Algunos autores asumen conocer el número de rostros, otros asumen conocer la distribución de vectores latentes a priori, otros son métodos online, otros son offline. Es decir, cada uno arma su problema de manera distinta al anterior. De todas maneras algunos de los trabajos más relevantes del 2006 a la fecha son:
+
+- EVERINGHAM, Mark; SIVIC, Josef; ZISSERMAN, Andrew. Hello! My name is... Buffy''--Automatic Naming of Characters in TV Video. En BMVC. 2006. p. 6.
+
+Este trabajo es en gran medida el que despertó el interés por el problema de identificar rostros en un video. En este caso los autores utilizaban análisis de rostros y subtítulos para nombrar a cada personaje en la escena. Esto no es el problema principal que estamos buscando resolver, pero pertenece a la mismo tronco general de identificación en base a videos. 
+
+- WU, Baoyuan, et al. Constrained clustering and its application to face clustering in videos. En Proceedings of the IEEE conference on Computer Vision and Pattern Recognition. 2013. p. 3507-3514.
+
+En este trabajo, los autores buscan generar ***tracklets*** (secuencia temporal de detecciones de un mismo rostros), para entrenar un modelo de agrupamiento (clustering model) basado en cadenas ocultas de Markov (Hidden Markov Random Fields). Ellos asumen conocer el número de rostros (personas) en el dataset, y en base a ese número, las detecciones de rostros (vector latente y bounding box) se usan para ajustar un modelo, basado en Markov,  que las asigne a sus respectivas rostros (clusters). La variable aleatoria oculta es la imagen de cada rostro, y la variable observable es el vector latente (el embedding de esa rostro). La matriz de transición de la cadena de Markov es modelada como una función que fuerza el enlace entre rostros de un mismo tracklet (aumenta la probabilidad de transición), y a su vez, fuerza el no-enlace de rostros de tracklets temporalmente paralelos (dos rostros en una escena). Dos problemas parecen surgir con este método. El primero y más cuestionable es que la variable oculta no es aleatoria, pues cada rostro entra y sale de escena de manera determinista en cada video. No es aleatoria entre frame y frame, y esta altamente correlaciona con los instantes previos y futuros. Esto viola los supuestos de un proceso de Markov. El segundo problema es que requiere de un ajuste paramétrico (optimización), el cual se hizo usando el mismo dataset con que se evaluó.
+
+- JIN, SouYoung, et al. End-to-end face detection and cast grouping in movies using erdos-renyi clustering. En Proceedings of the IEEE International Conference on Computer Vision. 2017. p. 5276-5285.
+
+Este es uno de los primeros trabajos que he encontrado en que se busca pasar desde video a clusters de rostros. Separan su trabajo en dos partes, la primera es la generación de ***tracklets*** (secuencia temporal de detecciones de un mismo rostros). En la segunda parte realizan el agrupamiento usando un corolario de teoría de grafos llamado ***Erdos-Renyi*** y la métrica ***rank-1 count*** para generar los clusters y verificarlos respectivamente. La hipótesis del trabajo es encontrar un valor de corte (threshold) para la métrica de ***rank-1 count*** que entregue un muy baja tasa de Falsos Positivos, de manera que prediga con alta precisión (pero baja exhaustividad) que rostros son los mismos. El corolario de ***Erdos-Renyi*** asegura que los poco puntos de intersección en común entre secuencias de un mismo rostro pero de distinto tracklets generarán, con muy alta probabilidad, un grafo cerrado para cada rostro. Generarán, por tanto, un agrupamiento (cluster) distinto y definido para cada rostro. Para aceptar que dos tracklets son de un mismo rostro, ocupan la métrica en un subconjunto de 10 vectores de cada uno, y toman el máximo valor del rank-1 count. Si ese valor sigue siendo menor al valor de corte, entonces se acepta fundirlos en un solo agrupamiento (cluster). El potencial problema de este trabajo (para nuestro objetivo) es que asumen conocer la distribución de la métrica de los pares de rostros. Además, ocupan una partición de entrenamiento (train) para calcular el valor de corte que les de una baja tasa de FP. La otra partición es ocupada para pruebas (test), y así medir la efectividad del algoritmo.
+
+- YANG, Jiaolong, et al. Neural aggregation network for video face recognition. En Proceedings of the IEEE conference on computer vision and pattern recognition. 2017. p. 4362-4371.
+
+Este trabajo es altamente novedoso ya que realizan una reducción N a 1 de las imágenes de rostros de un tracklet. Las cuales son convertidas a espacio latente y luego combinadas en un único vector latente. Esta última etapa se realiza por medio de dos [bloques de atención](https://en.wikipedia.org/wiki/Attention_(machine_learning)) que agregan (combinan) todos los vectores latentes de entrada en uno solo. Este vector de salida está dentro de la [envolvente convexa (convex hull)](https://en.wikipedia.org/wiki/Convex_hull) de los vectores de entrada. Esto, ya que el vector de salida es, literalmente, la combinación lineal de las entradas. Lo importante es que el peso para el i-esimo vector no es estático, sino que es una función de ese mismo vector de entrada. Es justamente este generador de pesos (llamado kernel) el que requiere de entrenamiento. El generador de pesos actúa como un filtro que reduce la importancia de vectores correspondientes a imágenes pequeñas o mala calidad, y prioriza los vectores de imágenes de buen tamaño y calidad. La tarea de comparación de tracklets y rostros es más fácil de realizar pues quedan ambos limitados a un solo vector respectivamente. 
+
+- KULSHRESHTHA, Prakhar; GUHA, Tanaya. An online algorithm for constrained face clustering in videos. En 2018 25th IEEE International Conference on Image Processing (ICIP). IEEE, 2018. p. 2670-2674.
+
+Este trabajo busca crear un algoritmo online para agrupar rostros. La distinción entre métodos offline (donde conocemos las rostros de antemano, aún que sea un subconjunto de test) y online es crítica, pues significa no conocer distribuciones de probabilidad, ni el número de rostros (clusters) a priori. Los autores proponen que las rostros detectadas en cada segmento de video, sean asignadas a un cluster existente o a uno nuevo. Es decir, que se re-conozca al rostro, o se declare como nuevo. Esto lo hacen generando tracklets de rostros en el video. Los tracklets se extienden cuando el traslape temporal (frame anterior y frame actual) es superior al 85% y cuando la distancia entre esos dos vectores latentes es menor a 0.1 (unidad arbitraria que depende del modelo generador del espacio latente). Ellos definen una medida de distancia entre el baricentros de una de las rostros conocidas y todos los vectores de un tracklet determinado. Por medio de un umbral (threshold) deciden si asignar al tracklet a una rostro conocida (actualizando el baricentro) o crear una rostro y baricentro nuevo. A través de matrices se añaden las restricciones de tracklets correspondientes a rostros que aparecen en paralelo en una misma escena y que se asumen como siempre distintas. Ellos evaluaron su método con dos datasets: Buffy - the Vampire Slayer (BF2006) y The Notting Hill  (NH2016).
 
 
-## Los ingredientes tecnológicos
+<!-- - MENDES, Paulo Renato C., et al. A Cluster-Matching-Based Method for Video Face Recognition. En Proceedings of the Brazilian Symposium on Multimedia and the Web. 2020. p. 97-104. -->
+
+<!-- En este trabajo ellos buscan comprar agrupamientos (clusters) conocidos (provenientes de algún dataset) con los agrupamientos (clusters) extraídos desde un video. E -->
+
+
+- TAPASWI, Makarand; LAW, Marc T.; FIDLER, Sanja. Video face clustering with unknown number of clusters. En Proceedings of the IEEE/CVF International Conference on Computer Vision. 2019. p. 5027-5036.
+
+Este articulo se propuso agrupar (cluster) todos los rostros observados en videos (6 episodio de la primera temporada de The Big Bang Theory y 6 episodio de la temporada 5 de Buffy - La caza vampiros) de manera que coincidieron con el número de personajes. Esto lo hicieron sin conocer a priori el número de personajes (rostros distintos) en cada episodio. 
+
+
+- GUNTHER, Manuel, et al. Toward open-set face recognition. En Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition Workshops. 2017. p. 71-80.
+
+<!-- En cuanto a los conjuntos de datos en que se evalúa el avance de este problema, no existe aún (hasta donde sé) uno que cumple al 100% de lo que buscamos. Es decir, videos en que haya más de una rostro en cada escena, y que alguna de esas rostros se vuelvan a ver dentro de ese mismo, u otro video. Sin embargo, algunos conjuntos de datos que otros autores han usado son:
+- YouTube Faces DB 
+- IJB-S
+- HACS (Human Action Clips)  -->
+
+## Códigos disponibles
+
+En cuanto a las implementaciones disponibles. Algunos repositorios que tienen algún nivel de reconocimiento en video son:
+- https://github.com/wansook0316/MultiFaceTrackerUsingDeepsort
+- https://github.com/deepinsight/insightface
+
+
+## ¿Como implementar el sueño?
 
 Para poder realizar el reconocimiento facial se necesita de varios pasos (ver imagen). En este proyecto se trabajó con las siguientes herramientas tecnológicas:
 
@@ -75,14 +134,14 @@ En el caso del reconocimiento de rostros. La forma más sencilla (pero no la má
  
 <!-- ## Los desafíos -->
 
-## El código
+## Mi código
 
 El código esta disponible para su uso libre y gratuito en [https://github.com/toopazo/airflow](https://github.com/toopazo/airflow). Allí mismo están todas las instrucciones de instalación y ejecución. 
 
 El código hace uso de Docker para levantar una imagen de Postgres y una imagen de inferencia, ademas de otra para realizar el procesamiento de IA y el reconocimiento de rostros. 
 
 
-## Resultados
+<!-- ### Resultados -->
 
 ### Resultados al dia 5 de Diciembre de 2024. 
 
