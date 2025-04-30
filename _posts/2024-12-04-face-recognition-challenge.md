@@ -80,10 +80,12 @@ Desde un punto de vista más técnico, lo que diferencia el reconocimiento en ba
 
 ## Códigos disponibles
 
+
 En cuanto a las implementaciones disponibles. Algunos repositorios que tienen algún nivel de reconocimiento en video son:
 - https://github.com/wansook0316/MultiFaceTrackerUsingDeepsort
 - https://github.com/deepinsight/insightface
 - https://github.com/ankuPRK/COFC
+- https://github.com/deepinsight/insightface
 
 # Airflow: Mi (humilde) implementación
 
