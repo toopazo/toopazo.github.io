@@ -1,7 +1,7 @@
 ---
 title: ¿Porque usar Github Pages y Jekyll para una página web tipo Blog?
 date: 2024-03-23
-cover: "https://raw.githubusercontent.com/toopazo/imgodg/main/gituhbpages_wordpress.png"
+cover: "/assets/images/imgodg/gituhbpages_wordpress.png"
 summary: "GitHub Pages + Jekyll: costo cero, control total del código y flujo git como única forma de publicar."
 tags: [web, jekyll, github-pages, devtools]
 ---
@@ -10,7 +10,7 @@ tags: [web, jekyll, github-pages, devtools]
 
 <center>
 <figure>
-  <img src="https://raw.githubusercontent.com/toopazo/imgodg/main/gituhbpages_wordpress.png" style="width:100%" alt="alt_text" /> 
+  <img src="/assets/images/imgodg/gituhbpages_wordpress.png" style="width:100%" alt="alt_text" /> 
 </figure> 
 </center>
 

@@ -1,16 +1,16 @@
 ---
 title: Alternativas para un vehículo aéreo no tripulado open-source
 date: 2021-06-01
-cover: "https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/dji_matrice_300rtk.jpg"
+cover: "/assets/images/imgodg/uas_technology/dji_matrice_300rtk.jpg"
 summary: "Comparativa de plataformas open-source (PX4, ArduPilot, ROS) para construir y volar un UAV desde cero."
 tags: [drones, UAV, open-source, PX4]
 mathjax: true
 ---
 
 <center>
-<img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/dji_matrice_300rtk.jpg" width="33%" alt="alt_text" title="image_tooltip" /> 
-<img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/freefly_astro.jpeg" width="33%" alt="alt_text" title="image_tooltip" /> 
-<img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/sensefly_ebee.jpeg" width="28%" alt="alt_text" title="image_tooltip" />
+<img src="/assets/images/imgodg/uas_technology/dji_matrice_300rtk.jpg" width="33%" alt="alt_text" title="image_tooltip" /> 
+<img src="/assets/images/imgodg/uas_technology/freefly_astro.jpeg" width="33%" alt="alt_text" title="image_tooltip" /> 
+<img src="/assets/images/imgodg/uas_technology/sensefly_ebee.jpeg" width="28%" alt="alt_text" title="image_tooltip" />
 </center>
 
 Las compañías de Drones dominantes como DJI, Parrot, SenseFly, Freefly, etc, ofrecen al mercado soluciones cerradas de hardware y software. Sus vehículos son de muy buena calidad y su fama es merecida. Pero si nuestra intención es aprender, experimentar, modificar o innovar con esta tecnología, entonces existen alternativas mejores que nos permiten hacer todo esto y más.
@@ -37,18 +37,18 @@ Pixhawk ([https://pixhawk.org/](https://pixhawk.org/)) es uno de esos proyectos 
 - Uno de esos fabricantes es HolyBro que comercializa el producto Pixhawk 4 ([http://www.holybro.com/product/pixhawk-4/](http://www.holybro.com/product/pixhawk-4/)).  
 
 <center>
-<img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/pixhawk_4.jpg" width="30%" alt="alt_text" title="image_tooltip" />
+<img src="/assets/images/imgodg/uas_technology/pixhawk_4.jpg" width="30%" alt="alt_text" title="image_tooltip" />
 </center>
 - Otra compañía es Auterion con el producto Skynode ([https://auterion.com/drone-manufacturers/skynode/](https://auterion.com/drone-manufacturers/skynode/)). 
 
 <center>
-<img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/hexproficnc_cube_orange.jpg" width="35%" alt="alt_text" title="image_tooltip" /> 
+<img src="/assets/images/imgodg/uas_technology/hexproficnc_cube_orange.jpg" width="35%" alt="alt_text" title="image_tooltip" /> 
 </center>
 
 - Una tercera opción es HEX/Proficnc y el producto The Cube Orange Standard Set ([https://www.cubepilot.org/#/cube](https://www.cubepilot.org/#/cube/features)).
 
 <center>
-<img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/auterion_skynode.png" width="30%" alt="alt_text" title="image_tooltip" /> 
+<img src="/assets/images/imgodg/uas_technology/auterion_skynode.png" width="30%" alt="alt_text" title="image_tooltip" /> 
 </center>
 
 
@@ -59,19 +59,19 @@ Además de ya mencionado computador de vuelo es necesario contar con los siguien
 
 - Control remoto (en manos del piloto) y radio receptora (en el vehículo) compatibles. 
 <center>
-<img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/futaba_T8FG.jpg" width="35%" alt="alt_text" title="image_tooltip" /> 
+<img src="/assets/images/imgodg/uas_technology/futaba_T8FG.jpg" width="35%" alt="alt_text" title="image_tooltip" /> 
 </center>
 - Radio de telemetría (en el vehículo) y otra en tierra (conectada a la estación terrena)
 <center>
-<img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/holybro_sik_radio.jpg" width="45%" alt="alt_text" title="image_tooltip" /> 
+<img src="/assets/images/imgodg/uas_technology/holybro_sik_radio.jpg" width="45%" alt="alt_text" title="image_tooltip" /> 
 </center>
 - Actuador para multirotor: controlador de velocidad (i.e. ESC), motor y hélices
 <center>
-<img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/multirotor_actuator_v1.jpg" width="75%" alt="alt_text" title="image_tooltip" /> 
+<img src="/assets/images/imgodg/uas_technology/multirotor_actuator_v1.jpg" width="75%" alt="alt_text" title="image_tooltip" /> 
 </center>
 - Actuador para avión: Servomotor y superficie de mando (en rojo)
 <center>
-<img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/aileron_servo_v1.jpg" width="45%" alt="alt_text" title="image_tooltip" /> 
+<img src="/assets/images/imgodg/uas_technology/aileron_servo_v1.jpg" width="45%" alt="alt_text" title="image_tooltip" /> 
 </center>
 
 ## 2) Software
@@ -82,11 +82,11 @@ Es frecuentemente usado para volar tanto multirrotores, aviones y diseños exper
 
 - [Quadrotor X](https://docs.px4.io/master/en/airframes/airframe_reference.html#quadrotor-x)
 <center>
-<img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/px4_airframe_quadx.png" width="40%" alt="alt_text" title="image_tooltip" /> 
+<img src="/assets/images/imgodg/uas_technology/px4_airframe_quadx.png" width="40%" alt="alt_text" title="image_tooltip" /> 
 </center>
 - [Standard plane](https://docs.px4.io/master/en/airframes/airframe_reference.html#standard-plane)
 <center>
-<img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/px4_airframe_standard_plane.png" width="40%" alt="alt_text" title="image_tooltip" /> 
+<img src="/assets/images/imgodg/uas_technology/px4_airframe_standard_plane.png" width="40%" alt="alt_text" title="image_tooltip" /> 
 </center>
 
 ### Estimación
@@ -117,7 +117,7 @@ $$\boldsymbol{\dot{x}} = \boldsymbol{A} \boldsymbol{x} + \boldsymbol{B} \boldsym
 donde tanto $$\boldsymbol{A}$$ como $$\boldsymbol{B}$$ son matrices con coeficientes constantes, pero dependientes del punto de linealización. La derivación matemática queda para otro ocasión, pero para el caso específico de un multirrotores, el diseño es
 
 <center>
-<img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/px4_mc_control_arch.jpg" width="100%" alt="alt_text" title="image_tooltip" /> 
+<img src="/assets/images/imgodg/uas_technology/px4_mc_control_arch.jpg" width="100%" alt="alt_text" title="image_tooltip" /> 
 </center>
 
 La entrada al diagrama es el conjunto de comandos del piloto, la salida corresponde a los comandos a los motores del vehículo y/o servo motores. 
@@ -131,7 +131,7 @@ QGroundControl ([http://qgroundcontrol.com/](http://qgroundcontrol.com/)) es tam
 
 En concreto con este programa se puede saber planificar las zonas en que un vehículo volará, las zonas prohibidas, etc. Y una vez en el aire, conocer en todo en línea la posición, velocidad, carga de baterías y otros valores de vuelo importantes. 
 <center>
-<img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/qgroundcontrol_preview.jpg" width="100%" alt="alt_text" title="image_tooltip" /> 
+<img src="/assets/images/imgodg/uas_technology/qgroundcontrol_preview.jpg" width="100%" alt="alt_text" title="image_tooltip" /> 
 </center>
 
 ## 4) Capacidades de cámara y video 
@@ -139,7 +139,7 @@ En concreto con este programa se puede saber planificar las zonas en que un veh�
 Evidentemente un vehículo aéreo que no pueda transportar cámaras, sensores y carga es de baja utilidad para los usuarios de esta plataforma. Es por ello que cualquier alternativa a las soluciones de las compañías comerciales dominantes debe contemplar esta utilidad. En conjunto, PX4 y QGroundControl permiten hacer streaming de video. Personalmente no he probado esta opción, pero es algo que planeo hacer pronto.
 
 <center>
-<img src="https://raw.githubusercontent.com/toopazo/imgodg/main/uas_technology/qgroundcontrol_gstreamer.png" width="100%" alt="alt_text" title="image_tooltip" /> 
+<img src="/assets/images/imgodg/uas_technology/qgroundcontrol_gstreamer.png" width="100%" alt="alt_text" title="image_tooltip" /> 
 </center>
 
 ## 5) Capacidades de ADS–B

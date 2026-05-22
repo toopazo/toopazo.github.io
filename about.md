@@ -6,7 +6,7 @@ mathjax: true
 categories: media
 ---
 <center>
-	<img src="https://raw.githubusercontent.com/toopazo/imgodg/main/toopazo_avia_lab.jpeg" alt="me" style="width:60%" />
+	<img src="/assets/images/imgodg/toopazo_avia_lab.jpeg" alt="me" style="width:60%" />
 </center>
 
 
