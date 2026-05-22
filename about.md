@@ -9,6 +9,11 @@ categories: media
 	<img src="/assets/images/imgodg/toopazo_avia_lab.jpeg" alt="me" style="width:60%" />
 </center>
 
+<center>
+	<a href="/cv/academico_visual.pdf">📄 CV Académico (ES)</a>
+	&nbsp;&nbsp;·&nbsp;&nbsp;
+	<a href="/cv/academico_visual_en.pdf">📄 CV Académico (EN)</a>
+</center>
 
 # ¡Hola mundo! 
 
