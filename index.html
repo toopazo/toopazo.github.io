@@ -1,10 +1,47 @@
 ---
 layout: default
-title: "Home"
+title: "Inicio"
 ---
 
-{% if site.show_excerpts %}
-  {% include home.html %}
-{% else %}
-  {% include archive.html title="Posts" %}
-{% endif %}
+<article>
+
+  <div class="hub-section area-academico">
+    <div class="hub-section-head">
+      <h2 class="hub-section-title">Académico</h2>
+      <a class="hub-section-all" href="{{ "/academico/" | relative_url }}">Ver todo →</a>
+    </div>
+    <div class="card-grid">
+      {% assign caps = site.academico | sort: "date" | reverse %}
+      {% for capsule in caps limit:3 %}
+        {% include card.html capsule=capsule %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="hub-section area-ingenieria">
+    <div class="hub-section-head">
+      <h2 class="hub-section-title">Ingeniería</h2>
+      <a class="hub-section-all" href="{{ "/ingenieria/" | relative_url }}">Ver todo →</a>
+    </div>
+    <div class="card-grid">
+      {% assign caps = site.ingenieria | sort: "date" | reverse %}
+      {% for capsule in caps limit:3 %}
+        {% include card.html capsule=capsule %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="hub-section area-personal">
+    <div class="hub-section-head">
+      <h2 class="hub-section-title">Personal</h2>
+      <a class="hub-section-all" href="{{ "/personal/" | relative_url }}">Ver todo →</a>
+    </div>
+    <div class="card-grid">
+      {% assign caps = site.personal | sort: "date" | reverse %}
+      {% for capsule in caps limit:3 %}
+        {% include card.html capsule=capsule %}
+      {% endfor %}
+    </div>
+  </div>
+
+</article>

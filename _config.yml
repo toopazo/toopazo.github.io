@@ -12,9 +12,33 @@ lang: "es"
 excerpt_separator: "\n\n\n"
 date_format: "%d %m, %Y"
 
+# Collections
+
+collections:
+  academico:
+    output: true
+    permalink: /academico/:title/
+    sort_by: date
+  ingenieria:
+    output: true
+    permalink: /ingenieria/:title/
+    sort_by: date
+  personal:
+    output: true
+    permalink: /personal/:title/
+    sort_by: date
+
+defaults:
+  - scope: {path: "", type: academico}
+    values: {layout: capsule}
+  - scope: {path: "", type: ingenieria}
+    values: {layout: capsule}
+  - scope: {path: "", type: personal}
+    values: {layout: capsule}
+
 # Layout
 
-show_excerpts: true        # show article excerpts on the home page
+show_excerpts: false       # home page is now the hub
 show_frame: true           # adds a gray frame to the site
 show_sidebar: false        # show a sidebar instead of the usual header
 minimal: false             # use a dark header
@@ -22,8 +46,11 @@ minimal: false             # use a dark header
 # Menu
 
 navigation:                # accepts {file, title, url, icon, sidebaricon}
-  - {file: "index.html"}
-  - {file: "about.md"}
+  - {file: "index.html",     title: "Inicio"}
+  - {file: "academico.html", title: "Académico"}
+  - {file: "ingenieria.html",title: "Ingeniería"}
+  - {file: "personal.html",  title: "Personal"}
+  - {file: "about.md",       title: "Contacto"}
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
   - {title: Mail, icon: envelope, url: "mailto:toopazo@proton.me"}

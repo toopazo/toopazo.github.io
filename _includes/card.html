@@ -1,0 +1,18 @@
+<a class="card" href="{{ include.capsule.url | relative_url }}">
+  {% if include.capsule.cover %}
+  <img class="card-cover" src="{{ include.capsule.cover }}" alt="{{ include.capsule.title }}" loading="lazy" />
+  {% else %}
+  <span class="card-cover-placeholder"></span>
+  {% endif %}
+  <div class="card-body">
+    <h2 class="card-title">{{ include.capsule.title }}</h2>
+    <time class="card-date" datetime="{{ include.capsule.date | date_to_xmlschema }}">{{ include.capsule.date | date: site.date_format }}</time>
+    {% if include.capsule.summary %}<p class="card-summary">{{ include.capsule.summary }}</p>{% endif %}
+    {% if include.capsule.tags %}
+    <div class="card-tags">
+      {% for tag in include.capsule.tags %}<span class="card-tag">{{ tag }}</span>{% endfor %}
+    </div>
+    {% endif %}
+    <span class="card-cta">Leer →</span>
+  </div>
+</a>
